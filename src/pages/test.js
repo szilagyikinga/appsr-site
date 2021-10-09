@@ -30,27 +30,28 @@ const Test = ({
             className="row"
             id="portfolio"
             data-isotope='{"layoutMode": "fitRows"}'
-          ></div>
-          {blogs.map((blog) => (
-            <div class="col-12 col-md-4 product">
-              <a class="card card-flush mb-7" href="#!">
-                <div class="card-zoom">
-                  <StaticImage
-                    src="../assets/images/portfolio-1.jpg"
-                    alt="Person Pouring Salt in Bowl"
-                    className="card-img-top rounded shadow-light-lg"
-                    placeholder="blurred"
-                  />
-                </div>
+          >
+            {blogs.map((blog) => (
+              <div class="col-12 col-md-4 product">
+                <a class="card card-flush mb-7" href="#!">
+                  <div class="card-zoom">
+                    <StaticImage
+                      src="../assets/images/portfolio-1.jpg"
+                      alt="Person Pouring Salt in Bowl"
+                      className="card-img-top rounded shadow-light-lg"
+                      placeholder="blurred"
+                    />
+                  </div>
 
-                <div class="card-footer">
-                  <h6 class="text-uppercase mb-1 text-muted">Branding</h6>
+                  <div class="card-footer">
+                    {/* <h6 class="text-uppercase mb-1 text-muted">{blog.title}</h6> */}
 
-                  <h4 class="mb-0">Curology Campaign</h4>
-                </div>
-              </a>
-            </div>
-          ))}
+                    <h4 class="mb-0">{blog.title}</h4>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </body>

@@ -251,8 +251,8 @@ a.card-meta {
   .card-bleed {
     width: auto;
     min-width: 100%;
-    margin-right: -math.div($grid-gutter-width, 2);
-    margin-left: -math.div($grid-gutter-width, 2);
+    margin-right: math.div(-$grid-gutter-width, 2);
+    margin-left: math.div(-$grid-gutter-width, 2);
     border-radius: 0;
   }
 
@@ -265,6 +265,6 @@ a.card-meta {
   }
 
   .card-bleed .card-list .list-link::before {
-    left: -math.div($grid-gutter-width, 2);
+    left: math.div(-$grid-gutter-width, 2);
   }
 }
