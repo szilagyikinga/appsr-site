@@ -1,6 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+
+// Transition
+const transitionDuration = 200;
+// Breakpoint
+const desktopSize = 992;
 
 const Navigation = () => {
+  const [menuHasShowClass, addMenuHasShowClass] = useState(false);
+  const [menuHasShowingClass, addMenuHasShowingClass] = useState(false);
+
+  const showDrop = () => {
+    if (window.innerWidth < desktopSize) {
+      return;
+    }
+    addMenuHasShowingClass(true);
+    setTimeout(function () {
+      addMenuHasShowingClass(false);
+      addMenuHasShowClass(true);
+    }, 1);
+  };
+  const hideDrop = () => {
+    setTimeout(() => {
+      if (window.innerWidth < desktopSize) {
+        return;
+      }
+
+      if (!menuHasShowClass) {
+        return;
+      }
+
+      addMenuHasShowingClass(true);
+      addMenuHasShowClass(false);
+
+      setTimeout(() => {
+        addMenuHasShowingClass(false);
+      }, transitionDuration);
+    }, 2);
+  };
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom">
       <div className="container-fluid">
@@ -42,7 +79,12 @@ const Navigation = () => {
           </button>
 
           {/* <!-- Navigation --> */}
-          <ul className="navbar-nav ms-auto">
+          <ul
+            // onMouseEnter={showDrop}
+            // onMouseLeave={hideDrop}
+            // onClick={hideDrop}
+            className="navbar-nav ms-auto"
+          >
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
