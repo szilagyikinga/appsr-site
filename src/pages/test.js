@@ -58,7 +58,7 @@ const Test = ({
   </Layout>
 );
 
-export const myquery = graphql`
+export const query = graphql`
   {
     allContentfulBlog(
       sort: { fields: title, order: ASC }
@@ -69,6 +69,9 @@ export const myquery = graphql`
         title
         content {
           tags
+        }
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
       }
     }
