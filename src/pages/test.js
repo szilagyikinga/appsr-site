@@ -1,6 +1,7 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { Link, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import slugify from "slugify";
 
 import Layout from "../components/layout";
 
@@ -31,26 +32,31 @@ const Test = ({
             id="portfolio"
             data-isotope='{"layoutMode": "fitRows"}'
           >
-            {blogs.map((blog) => (
-              <div class="col-12 col-md-4 product">
-                <a class="card card-flush mb-7" href="#!">
-                  <div class="card-zoom">
-                    <StaticImage
-                      src="../assets/images/portfolio-1.jpg"
-                      alt="Person Pouring Salt in Bowl"
-                      className="card-img-top rounded shadow-light-lg"
-                      placeholder="blurred"
-                    />
-                  </div>
+            {blogs.map((blog) => {
+              const { id, title, image } = blog;
+              const pathToImage = getImage(image);
+              const slug = slugify(title, { lower: true });
+              return (
+                <div key={id} class="col-12 col-md-4 product">
+                  <Link to={`/${slug}`} class="card card-flush mb-7">
+                    <div class="card-zoom">
+                      <GatsbyImage
+                        image={pathToImage}
+                        alt={title}
+                        className="card-img-top rounded shadow-light-lg"
+                        placeholder="blurred"
+                      />
+                    </div>
 
-                  <div class="card-footer">
-                    {/* <h6 class="text-uppercase mb-1 text-muted">{blog.title}</h6> */}
+                    <div class="card-footer">
+                      {/* <h6 class="text-uppercase mb-1 text-muted">{blog.title}</h6> */}
 
-                    <h4 class="mb-0">{blog.title}</h4>
-                  </div>
-                </a>
-              </div>
-            ))}
+                      <h4 class="mb-0">{blog.title}</h4>
+                    </div>
+                  </Link>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
