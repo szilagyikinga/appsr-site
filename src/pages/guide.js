@@ -5,9 +5,9 @@ import slugify from "slugify";
 
 import Layout from "../components/layout";
 
-const Test = ({
+const Guide = ({
   data: {
-    allContentfulBlog: { nodes: blogs },
+    allContentfulGuide: { nodes: guides },
   },
 }) => (
   <Layout>
@@ -32,8 +32,8 @@ const Test = ({
             id="portfolio"
             data-isotope='{"layoutMode": "fitRows"}'
           >
-            {blogs.map((blog) => {
-              const { id, title, image } = blog;
+            {guides.map((guide) => {
+              const { id, title, image } = guide;
               const pathToImage = getImage(image);
               const slug = slugify(title, { lower: true });
               return (
@@ -49,9 +49,9 @@ const Test = ({
                     </div>
 
                     <div class="card-footer">
-                      {/* <h6 class="text-uppercase mb-1 text-muted">{blog.title}</h6> */}
+                      {/* <h6 class="text-uppercase mb-1 text-muted">{guide.title}</h6> */}
 
-                      <h4 class="mb-0">{blog.title}</h4>
+                      <h4 class="mb-0">{guide.title}</h4>
                     </div>
                   </Link>
                 </div>
@@ -66,16 +66,10 @@ const Test = ({
 
 export const query = graphql`
   {
-    allContentfulBlog(
-      sort: { fields: title, order: ASC }
-      filter: { featured: { eq: true } }
-    ) {
+    allContentfulGuide(sort: { fields: title, order: ASC }) {
       nodes {
         id
         title
-        content {
-          tags
-        }
         image {
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
@@ -84,4 +78,4 @@ export const query = graphql`
   }
 `;
 
-export default Test;
+export default Guide;

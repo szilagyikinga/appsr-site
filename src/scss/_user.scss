@@ -1,4 +1,12 @@
-// 
+//
 // user.scss
 // Use this to write your custom SCSS
 //
+
+.blog h1 {
+  @extend .fw-bold;
+}
+
+.blog h2 {
+  @extend .fw-bold;
+}

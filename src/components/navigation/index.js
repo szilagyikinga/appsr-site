@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom">
       <div className="container-fluid">
         {/* <!-- Brand --> */}
-        <Link className="navbar-brand" to="/test">
+        <Link className="navbar-brand" to="/">
           <Logo className="navbar-brand-img" width="130" alt="APPSR" />
         </Link>
 
@@ -40,7 +40,12 @@ const Navigation = () => {
           </button>
           <ul className="navbar-nav m-auto">
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/test" activeClassName="active">
+              <Link className="nav-link" to="/blog" activeClassName="active">
+                Blog
+              </Link>
+            </li>
+            <li className="nav-item dropdown">
+              <Link className="nav-link" to="/guide" activeClassName="active">
                 Les guides
               </Link>
             </li>
