@@ -4,6 +4,9 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import slugify from "slugify";
 
 import Layout from "../components/layout";
+import BlogHeroImage from "../components/pages/blog/blog-hero-image";
+import Curve1 from "../assets/images/curve-1.inline.svg";
+import Curve3 from "../assets/images/curve-3.inline.svg";
 
 const Blog = ({
   data: {
@@ -11,56 +14,63 @@ const Blog = ({
   },
 }) => (
   <Layout>
-    <body className="bg-light">
-      <section className="pt-8 pt-md-12 pb-12 pb-md-15">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-12 col-md-10 col-lg-8 text-center">
-              <h1 className="display-1 fw-bold">Our Work.</h1>
-              <p className="lead text-secondary mb-4">
-                We design & build products, tools, apps, and sites for companies
-                trying to do great things for our planet.
-              </p>
-            </div>
+    <section className="overlay overlay-black overlay-60">
+      <BlogHeroImage />
+    </section>
+    <div className="position-relative">
+      <div className="shape shape-bottom shape-fluid-x text-light">
+        <Curve1 />
+      </div>
+    </div>
+    <section className="pt-7 pt-md-10">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h3 className="mb-0">Popular Stories</h3>
+
+            <p className="mb-5 text-muted">
+              Here’s what’s big in the past week!
+            </p>
           </div>
         </div>
-      </section>
-      <section className="py-8 py-md-11 mt-n10 mt-md-n14">
-        <div className="container">
-          <div
-            className="row"
-            id="portfolio"
-            data-isotope='{"layoutMode": "fitRows"}'
-          >
-            {blogs.map((blog) => {
-              const { id, title, image } = blog;
-              const pathToImage = getImage(image);
-              const slug = slugify(title, { lower: true });
-              return (
-                <div key={id} class="col-12 col-md-4 product">
-                  <Link to={`/${slug}`} class="card card-flush mb-7">
-                    <div class="card-zoom">
-                      <GatsbyImage
-                        image={pathToImage}
-                        alt={title}
-                        className="card-img-top rounded shadow-light-lg"
-                        placeholder="blurred"
-                      />
-                    </div>
+        <div className="row">
+          {blogs.map((blog) => {
+            const { id, title, image } = blog;
+            const pathToImage = getImage(image);
+            const slug = slugify(title, { lower: true });
+            return (
+              <div key={id} className="col-12 col-md-6 col-lg-4 d-flex">
+                <div className="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
+                  <Link to={`/${slug}`} lassName="card-img-top">
+                    <GatsbyImage
+                      image={pathToImage}
+                      alt={title}
+                      className="card-img-top"
+                      placeholder="blurred"
+                    />
 
-                    <div class="card-footer">
-                      {/* <h6 class="text-uppercase mb-1 text-muted">{blog.title}</h6> */}
-
-                      <h4 class="mb-0">{blog.title}</h4>
+                    <div className="position-relative">
+                      <div className="shape shape-bottom shape-fluid-x text-white">
+                        <Curve3 />
+                      </div>
                     </div>
                   </Link>
+
+                  <a className="card-body" href="#!">
+                    <h3>{title}</h3>
+
+                    <p className="mb-0 text-muted">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Duis nec condimentum quam.
+                    </p>
+                  </a>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
-      </section>
-    </body>
+      </div>
+    </section>
   </Layout>
 );
 
