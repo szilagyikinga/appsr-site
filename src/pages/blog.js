@@ -14,9 +14,7 @@ const Blog = ({
   },
 }) => (
   <Layout>
-    <section className="overlay overlay-black overlay-60">
-      <BlogHeroImage />
-    </section>
+    <BlogHeroImage />
     <div className="position-relative">
       <div className="shape shape-bottom shape-fluid-x text-light">
         <Curve1 />
@@ -41,7 +39,7 @@ const Blog = ({
             return (
               <div key={id} className="col-12 col-md-6 col-lg-4 d-flex">
                 <div className="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-                  <Link to={`/${slug}`} lassName="card-img-top">
+                  <Link to={`/${slug}`} className="card-img-top">
                     <GatsbyImage
                       image={pathToImage}
                       alt={title}

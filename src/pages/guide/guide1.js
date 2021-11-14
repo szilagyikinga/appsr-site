@@ -1,0 +1,29 @@
+import React from "react";
+import { graphql } from "gatsby";
+
+import GuideList from "../../components/pages/guide/guide-list";
+
+const Guide = ({
+  data: {
+    allContentfulGuide: { nodes: guides },
+  },
+}) => <GuideList guides={guides} />;
+
+export const query = graphql`
+  {
+    allContentfulGuide(
+      sort: { fields: title, order: ASC }
+      filter: { content: { tags: { eq: "guide_1" } } }
+    ) {
+      nodes {
+        id
+        title
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
+        }
+      }
+    }
+  }
+`;
+
+export default Guide;
