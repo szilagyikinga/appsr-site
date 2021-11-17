@@ -3,21 +3,22 @@ import { graphql } from "gatsby";
 
 import Article from "../../components/article";
 
-const GuideTemplate = ({ data }) => {
+const SheetTemplate = ({ data }) => {
   const {
     title,
     image,
-    childContentfulGuideDescriptionTextNode: {
+    childContentfulSheetDescriptionTextNode: {
       childMarkdownRemark: { html },
     },
-  } = data.contentfulGuide;
+  } = data.contentfulSheet;
+
   return <Article title={title} image={image} html={html} />;
 };
 
 export const query = graphql`
-  query getSingleGuide($title: String) {
-    contentfulGuide(title: { eq: $title }) {
-      childContentfulGuideDescriptionTextNode {
+  query getSingleSheet($title: String) {
+    contentfulSheet(title: { eq: $title }) {
+      childContentfulSheetDescriptionTextNode {
         childMarkdownRemark {
           html
         }
@@ -30,4 +31,4 @@ export const query = graphql`
   }
 `;
 
-export default GuideTemplate;
+export default SheetTemplate;

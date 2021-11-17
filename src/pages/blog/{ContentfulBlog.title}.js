@@ -3,26 +3,36 @@ import { graphql } from "gatsby";
 
 import Article from "../../components/article";
 
-const GuideTemplate = ({ data }) => {
+const BlogTemplate = ({ data }) => {
   const {
     title,
     image,
-    childContentfulGuideDescriptionTextNode: {
+    childContentfulBlogDescriptionTextNode: {
       childMarkdownRemark: { html },
     },
-  } = data.contentfulGuide;
+  } = data.contentfulBlog;
+
   return <Article title={title} image={image} html={html} />;
 };
 
 export const query = graphql`
-  query getSingleGuide($title: String) {
-    contentfulGuide(title: { eq: $title }) {
-      childContentfulGuideDescriptionTextNode {
+  query getSingleBlog($title: String) {
+    contentfulBlog(title: { eq: $title }) {
+      childContentfulBlogDescriptionTextNode {
         childMarkdownRemark {
           html
         }
       }
       title
+      content {
+        ingredients
+        instructions
+        tags
+        tools
+      }
+      description {
+        description
+      }
       image {
         gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
       }
@@ -30,4 +40,4 @@ export const query = graphql`
   }
 `;
 
-export default GuideTemplate;
+export default BlogTemplate;

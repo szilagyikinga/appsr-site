@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import slugify from "slugify";
 
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 
 const Focus = ({
   data: {
@@ -38,7 +38,7 @@ const Focus = ({
               const slug = slugify(title, { lower: true });
               return (
                 <div key={id} class="col-12 col-md-4 product">
-                  <Link to={`/${slug}`} class="card card-flush mb-7">
+                  <Link to={`${slug}`} class="card card-flush mb-7">
                     <div class="card-zoom">
                       <GatsbyImage
                         image={pathToImage}

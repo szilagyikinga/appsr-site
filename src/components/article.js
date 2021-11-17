@@ -1,19 +1,9 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import slugify from "slugify";
 
-import Layout from "../components/layout";
+import Layout from "./layout";
 
-const BlogTemplate = ({ data }) => {
-  const {
-    title,
-    content: { tags },
-    image,
-    childContentfulBlogDescriptionTextNode: {
-      childMarkdownRemark: { html },
-    },
-  } = data.contentfulBlog;
+const Article = ({ title, image, html }) => {
   const pathToImage = getImage(image);
 
   return (
@@ -44,17 +34,6 @@ const BlogTemplate = ({ data }) => {
                   __html: html,
                 }}
               />
-              <p>
-                Tags :
-                {tags.map((tag, index) => {
-                  const slug = slugify(tag, { lower: true });
-                  return (
-                    <Link to={`/tags/${slug}`} key={index}>
-                      {tag}
-                    </Link>
-                  );
-                })}
-              </p>
             </div>
           </div>
         </div>
@@ -63,29 +42,4 @@ const BlogTemplate = ({ data }) => {
   );
 };
 
-export const query = graphql`
-  query getSingleBlog($title: String) {
-    contentfulBlog(title: { eq: $title }) {
-      childContentfulBlogDescriptionTextNode {
-        childMarkdownRemark {
-          html
-        }
-      }
-      title
-      content {
-        ingredients
-        instructions
-        tags
-        tools
-      }
-      description {
-        description
-      }
-      image {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: TRACED_SVG)
-      }
-    }
-  }
-`;
-
-export default BlogTemplate;
+export default Article;

@@ -3,10 +3,10 @@ import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import slugify from "slugify";
 
-import Layout from "../components/layout";
-import BlogHeroImage from "../components/pages/blog/blog-hero-image";
-import Curve1 from "../assets/images/curve-1.inline.svg";
-import Curve3 from "../assets/images/curve-3.inline.svg";
+import Layout from "../../components/layout";
+import BlogHeroImage from "../../components/pages/blog/blog-hero-image";
+import Curve1 from "../../assets/images/curve-1.inline.svg";
+import Curve3 from "../../assets/images/curve-3.inline.svg";
 
 const Blog = ({
   data: {
@@ -39,7 +39,7 @@ const Blog = ({
             return (
               <div key={id} className="col-12 col-md-6 col-lg-4 d-flex">
                 <div className="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
-                  <Link to={`/${slug}`} className="card-img-top">
+                  <Link to={`${slug}`} className="card-img-top">
                     <GatsbyImage
                       image={pathToImage}
                       alt={title}
