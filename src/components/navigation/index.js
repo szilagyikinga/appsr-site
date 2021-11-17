@@ -40,12 +40,22 @@ const Navigation = () => {
           </button>
           <ul className="navbar-nav m-auto">
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/blog" activeClassName="active">
+              <Link
+                className="nav-link"
+                to="/blog"
+                activeClassName="active"
+                partiallyActive
+              >
                 Blog
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/guide" activeClassName="active">
+              <Link
+                className="nav-link"
+                to="/guide"
+                activeClassName="active"
+                partiallyActive
+              >
                 Les guides
               </Link>
             </li>
@@ -54,22 +64,38 @@ const Navigation = () => {
                 className="nav-link"
                 to="/information"
                 activeClassName="active"
+                partiallyActive
               >
                 Informations
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/fact" activeClassName="active">
+              <Link
+                className="nav-link"
+                to="/fact"
+                activeClassName="active"
+                partiallyActive
+              >
                 Fiches pratiques
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/focus" activeClassName="active">
+              <Link
+                className="nav-link"
+                to="/focus"
+                activeClassName="active"
+                partiallyActive
+              >
                 Focus
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/contact" activeClassName="active">
+              <Link
+                className="nav-link"
+                to="/contact"
+                activeClassName="active"
+                partiallyActive
+              >
                 Contact
               </Link>
             </li>
