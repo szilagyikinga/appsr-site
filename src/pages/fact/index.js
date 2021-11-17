@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import slugify from "slugify";
 
+import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
 
 const Fact = ({
@@ -35,11 +35,11 @@ const Fact = ({
             {sheets.map((sheet) => {
               const { id, title, image } = sheet;
               const pathToImage = getImage(image);
-              const slug = slugify(title, { lower: true });
+              const slug = slugify(title);
               return (
-                <div key={id} class="col-12 col-md-4 product">
-                  <Link to={`${slug}`} class="card card-flush mb-7">
-                    <div class="card-zoom">
+                <div key={id} className="col-12 col-md-4 product">
+                  <Link to={`${slug}`} className="card card-flush mb-7">
+                    <div className="card-zoom">
                       <GatsbyImage
                         image={pathToImage}
                         alt={title}
@@ -48,10 +48,10 @@ const Fact = ({
                       />
                     </div>
 
-                    <div class="card-footer">
-                      {/* <h6 class="text-uppercase mb-1 text-muted">{title}</h6> */}
+                    <div className="card-footer">
+                      {/* <h6 className="text-uppercase mb-1 text-muted">{title}</h6> */}
 
-                      <h4 class="mb-0">{title}</h4>
+                      <h4 className="mb-0">{title}</h4>
                     </div>
                   </Link>
                 </div>

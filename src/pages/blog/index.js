@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import slugify from "slugify";
 
+import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
 import BlogHeroImage from "../../components/pages/blog/blog-hero-image";
 import Curve1 from "../../assets/images/curve-1.inline.svg";
@@ -35,7 +35,7 @@ const Blog = ({
           {blogs.map((blog) => {
             const { id, title, image } = blog;
             const pathToImage = getImage(image);
-            const slug = slugify(title, { lower: true });
+            const slug = slugify(title);
             return (
               <div key={id} className="col-12 col-md-6 col-lg-4 d-flex">
                 <div className="card mb-6 mb-lg-0 shadow-light-lg lift lift-lg">
