@@ -46,16 +46,6 @@ const Navigation = ({ isDark = false }) => {
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"
-                to="/blog"
-                activeClassName="active"
-                partiallyActive
-              >
-                Blog
-              </Link>
-            </li>
-            <li className="nav-item dropdown">
-              <Link
-                className="nav-link"
                 to="/guide"
                 activeClassName="active"
                 partiallyActive
@@ -86,13 +76,23 @@ const Navigation = ({ isDark = false }) => {
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"
+                to="/blog"
+                activeClassName="active"
+                partiallyActive
+              >
+                Blog
+              </Link>
+            </li>
+            {/* <li className="nav-item dropdown">
+              <Link
+                className="nav-link"
                 to="/focus"
                 activeClassName="active"
                 partiallyActive
               >
                 Focus
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"
