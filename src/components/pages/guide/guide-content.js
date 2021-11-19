@@ -2,7 +2,7 @@ import React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
-import Curve1 from "../../../assets/images/curve-1.inline.svg";
+import Curve1 from "../../../images/curve-1.inline.svg";
 
 const GuideContent = () => {
   const { image1, image2, image3, image4 } = useStaticQuery(

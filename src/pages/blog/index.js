@@ -5,8 +5,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
 import BlogHeroImage from "../../components/pages/blog/blog-hero-image";
-import Curve1 from "../../assets/images/curve-1.inline.svg";
-import Curve3 from "../../assets/images/curve-3.inline.svg";
+import Curve1 from "../../images/curve-1.inline.svg";
+import Curve3 from "../../images/curve-3.inline.svg";
 
 const Blog = ({
   data: {

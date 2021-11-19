@@ -1,14 +1,18 @@
 import React from "react";
 import { Link } from "gatsby";
-import Logo from "../../assets/images/brand.inline.svg";
+import Logo from "../images/brand.inline.svg";
 
-const Navigation = () => {
+const Navigation = ({ isDark = false }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-      <div className="container-fluid">
+    <nav
+      className={`navbar navbar-expand-lg ${
+        isDark ? "navbar-dark" : "navbar-light bg-white border-bottom"
+      }`}
+    >
+      <div className="container">
         {/* <!-- Brand --> */}
         <Link className="navbar-brand" to="/">
-          <Logo className="navbar-brand-img" width="130" alt="APPSR" />
+          <Logo className="navbar-brand-img" width="80" alt="APPSR" />
         </Link>
 
         {/* <!-- Toggler --> */}

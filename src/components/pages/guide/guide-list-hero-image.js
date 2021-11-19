@@ -4,7 +4,7 @@ import { getImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 
-import Curve1 from "../../../assets/images/curve-1.inline.svg";
+import Curve1 from "../../../images/curve-1.inline.svg";
 
 const GuideList = () => {
   const { placeholderImage } = useStaticQuery(

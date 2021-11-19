@@ -1,12 +1,12 @@
 import React from "react";
 
-import Curve1 from "../../assets/images/curve-1.inline.svg";
+import Curve1 from "../../images/curve-1.inline.svg";
 import Layout from "../../components/layout";
 import GuideContent from "../../components/pages/guide/guide-content";
 
 const Guide = () => {
   return (
-    <Layout>
+    <Layout isDark>
       <section
         className="pt-12 pt-md-14 pb-12 pb-md-15 bg-gray-900"
         style={{ marginTop: -87 }}

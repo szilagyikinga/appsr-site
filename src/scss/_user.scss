@@ -10,3 +10,7 @@
 .blog h2 {
   @extend .fw-bold;
 }
+
+.blog strong {
+  color: $primary;
+}
