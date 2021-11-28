@@ -29,15 +29,12 @@ const Footer = ({ isDark }) => {
                   Conditions générales d'utilisation
                 </a>
               </li>
-            </ul>
-            <ul className="list-unstyled text-muted mb-0">
+
               <li className="mb-3">
                 <a href="#!" className="text-reset">
                   Politique de confidentialité
                 </a>
               </li>
-            </ul>
-            <ul className="list-unstyled text-muted mb-0">
               <li className="mb-3">
                 <a href="#!" className="text-reset">
                   Utilisation de cookies

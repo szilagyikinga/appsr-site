@@ -4,11 +4,11 @@ import Footer from "./footer";
 import "./../scss/typography.css";
 import "./../scss/theme.scss";
 
-const Layout = ({ children, darkNavigation, darkFooter }) => (
+const Layout = ({ children, darkNavigation, darkFooter, full }) => (
   <>
     <Navigation isDark={darkNavigation} />
     {children}
-    <Footer isDark={darkFooter} />
+    {!full && <Footer isDark={darkFooter} />}
   </>
 );
 
