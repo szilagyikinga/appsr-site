@@ -14,3 +14,16 @@
 .blog strong {
   color: $primary;
 }
+
+.footer-content {
+  text-align: center;
+  div:first-child {
+    margin-bottom: 2em;
+  }
+  @include media-breakpoint-up(lg) {
+    text-align: left;
+    div:first-child {
+      margin-bottom: 0;
+    }
+  }
+}

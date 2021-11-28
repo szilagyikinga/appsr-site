@@ -1,12 +1,14 @@
 import React from "react";
 import Navigation from "./navigation";
+import Footer from "./footer";
 import "./../scss/typography.css";
 import "./../scss/theme.scss";
 
-const Layout = ({ children, isDark }) => (
+const Layout = ({ children, darkNavigation, darkFooter }) => (
   <>
-    <Navigation isDark={isDark} />
-    <>{children}</>
+    <Navigation isDark={darkNavigation} />
+    {children}
+    <Footer isDark={darkFooter} />
   </>
 );
 

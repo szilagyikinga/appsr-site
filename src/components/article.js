@@ -2,6 +2,7 @@ import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Layout from "./layout";
+import Curve from "./curve";
 
 const Article = ({ title, image, html }) => {
   const pathToImage = getImage(image);
@@ -17,7 +18,7 @@ const Article = ({ title, image, html }) => {
           </div>
         </div>
       </section>
-      <section className="pt-6 pt-md-8">
+      <section className="py-8 py-md-11">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-9 col-xl-8 ">
@@ -38,6 +39,7 @@ const Article = ({ title, image, html }) => {
           </div>
         </div>
       </section>
+      <Curve className="text-gray-200" />
     </Layout>
   );
 };

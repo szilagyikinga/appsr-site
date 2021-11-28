@@ -1,12 +1,12 @@
 import React from "react";
 
-import Curve1 from "../../images/curve-1.inline.svg";
 import Layout from "../../components/layout";
+import Curve from "../../components/curve";
 import GuideContent from "../../components/pages/guide/guide-content";
 
 const Guide = () => {
   return (
-    <Layout isDark>
+    <Layout darkNavigation>
       <section
         className="pt-12 pt-md-14 pb-12 pb-md-15 bg-gray-900"
         style={{ marginTop: -87 }}
@@ -24,14 +24,11 @@ const Guide = () => {
           </div>
         </div>
       </section>
-      <div className="position-relative">
-        <div className="shape shape-bottom shape-fluid-x text-light">
-          <Curve1 />
-        </div>
-      </div>
+      <Curve className="text-light" />
       <section className="py-8 py-md-11 mt-n10 mt-md-n14">
         <GuideContent />
       </section>
+      <Curve className="text-gray-200" />
     </Layout>
   );
 };

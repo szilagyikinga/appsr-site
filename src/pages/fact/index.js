@@ -11,7 +11,7 @@ const Fact = ({
     allContentfulSheet: { nodes: sheets },
   },
 }) => (
-  <Layout isDark>
+  <Layout darkNavigation darkFooter>
     <section className="mt-n11 pt-12 pb-8 pt-md-14 bg-black bg-pattern-2">
       <div className="container">
         <div className="row justify-content-center">
@@ -65,39 +65,9 @@ const Fact = ({
         </div>
       </div>
     </section>
-    {/* <section className="py-8 py-md-11 mt-n10 mt-md-n14">
-      <div className="container">
-        <div
-          className="row"
-          id="portfolio"
-          data-isotope='{"layoutMode": "fitRows"}'
-        >
-          {sheets.map((sheet) => {
-            const { id, title, image } = sheet;
-            const pathToImage = getImage(image);
-            const slug = slugify(title);
-            return (
-              <div key={id} className="col-12 col-md-4 product">
-                <Link to={`${slug}`} className="card card-flush mb-7">
-                  <div className="card-zoom">
-                    <GatsbyImage
-                      image={pathToImage}
-                      alt={title}
-                      className="card-img-top rounded shadow-light-lg"
-                      placeholder="blurred"
-                    />
-                  </div>
-
-                  <div className="card-footer">
-                    <h4 className="mb-0">{title}</h4>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section> */}
+    <div class="bg-black">
+      <div class="container border-top border-gray-900-50"></div>
+    </div>
   </Layout>
 );
 

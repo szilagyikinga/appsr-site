@@ -4,8 +4,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
+import Curve from "../../components/curve";
 import BlogHeroImage from "../../components/pages/blog/blog-hero-image";
-import Curve1 from "../../images/curve-1.inline.svg";
 import Curve3 from "../../images/curve-3.inline.svg";
 
 const Blog = ({
@@ -15,12 +15,8 @@ const Blog = ({
 }) => (
   <Layout>
     <BlogHeroImage />
-    <div className="position-relative">
-      <div className="shape shape-bottom shape-fluid-x text-light">
-        <Curve1 />
-      </div>
-    </div>
-    <section className="pt-7 pt-md-10">
+    <Curve className="text-light" />
+    <section className="py-8 py-md-11">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -69,6 +65,7 @@ const Blog = ({
         </div>
       </div>
     </section>
+    <Curve className="text-gray-200" />
   </Layout>
 );
 

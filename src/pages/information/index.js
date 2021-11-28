@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
+import Curve from "../../components/curve";
 
 const Information = ({
   data: {
@@ -59,6 +60,7 @@ const Information = ({
         </div>
       </div>
     </section>
+    <Curve className="text-gray-200" />
   </Layout>
 );
 

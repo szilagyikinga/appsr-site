@@ -5,11 +5,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import slugify from "../../../services/slugify";
 import GuideListHeroImage from "./guide-list-hero-image";
 import Layout from "../../layout";
+import Curve from "../../curve";
 import Curve1 from "../../../images/curve-1.inline.svg";
 
 const GuideList = ({ guides }) => {
   return (
-    <Layout isDark>
+    <Layout darkNavigation>
       <GuideListHeroImage />
       <section className="py-8 py-md-11 mt-n10 mt-md-n14">
         <div className="container">
@@ -57,6 +58,7 @@ const GuideList = ({ guides }) => {
           </div>
         </div>
       </section>
+      <Curve className="text-gray-200" />
     </Layout>
   );
 };
