@@ -6,7 +6,7 @@ import BackgroundImage from "gatsby-background-image";
 
 import Curve1 from "../../../images/curve-1.inline.svg";
 
-const GuideList = () => {
+const HeroImage = () => {
   const { placeholderImage } = useStaticQuery(
     graphql`
       query {
@@ -55,4 +55,4 @@ const GuideList = () => {
   );
 };
 
-export default GuideList;
+export default HeroImage;
