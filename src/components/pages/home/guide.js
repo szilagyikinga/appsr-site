@@ -4,28 +4,28 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 const guides = [
   {
-    title: "Le guide de l'assurance de prêt",
+    title: "Les points à savoir",
     link: "guide1",
   },
   {
-    title: "Délégation d'assurance",
+    title: "La Délégation",
     link: "guide2",
   },
   {
-    title: "Guaratie d'assurance emprunteur",
+    title: "Les garanties",
     link: "guide3",
   },
   {
-    title: "Négotiation d'assurance de prêt",
+    title: "Re) Négocier",
     link: "guide4",
   },
 ];
 
 const GuideElement = ({ guide: { link, title } }) => (
   <div className="d-flex">
-    <div className="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
+    {/* <div className="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
       <i className="fe fe-check"></i>
-    </div>
+    </div> */}
 
     <Link to={`/guide/${link}`} className="d-flex guide-link">
       <p>{title}</p>
@@ -51,19 +51,13 @@ const GuideSection = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-md-6">
-            <span className="badge rounded-pill bg-primary-soft mb-3">
-              <span className="h6 text-uppercase">Les guides</span>
-            </span>
-            <h2>
-              Don't worry about pricing. <br />
-              <span className="text-primary">We maximize your earnings</span>.
-            </h2>
+            <h2>Les Guides.</h2>
 
             <p className="fs-lg text-gray-700 mb-6">
-              Instead of constantly worrying about when your home will be in
-              demand, just share your availability and we will price based on
-              popularity of your listing, seasonal factors, nearby events, and
-              more.
+              Qu'est-ce qu'une délégation d'assurance ? Comment renégocier le
+              taux de son assurance ? Retrouvez toutes les informations
+              détaillées sur l'assurance de prêt au travers de nos quatre guides
+              dédiés.
             </p>
             <div className="row">
               <div className="col-12 col-lg-6">

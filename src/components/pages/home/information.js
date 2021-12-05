@@ -1,4 +1,37 @@
 import * as React from "react";
+import { Link } from "gatsby";
+
+const information = [
+  {
+    title: "Délégation d'assurance",
+    subTitle: "De quoi s'agit-il ? Comment procéder...",
+    link: "info1",
+  },
+  {
+    title: "Rachat d'assurance de prêt",
+    subTitle: "Mode de calcul et taux annuel effectif...",
+    link: "info2",
+  },
+  {
+    title: "Assurance de prêt et âge",
+    subTitle: "Age limite ? Assurance de prêt pour les Séniors...",
+    link: "info3",
+  },
+];
+
+const InfoElement = ({ info: { link, title, subTitle } }) => (
+  <div className="list-group-item d-flex align-items-center">
+    <Link to={`/info/${link}`} className="me-auto info-link">
+      <p className="fw-bold mb-1">{title}</p>
+
+      <p className="fs-sm text-muted mb-0">{subTitle}</p>
+    </Link>
+
+    {/* <div className="badge badge-rounded-circle bg-success-soft ms-4">
+      <i className="fe fe-check"></i>
+    </div> */}
+  </div>
+);
 
 const InformationSection = () => {
   return (
@@ -6,77 +39,24 @@ const InformationSection = () => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-12 col-md-5 order-md-2">
-            <span className="badge bg-success-soft rounded-pill mb-3">
-              <span className="h6 text-uppercase">Benefits</span>
-            </span>
-
-            <h2>
-              We'll take of you with <br />
-              <span className="text-success">a great benefits package</span>.
-            </h2>
+            <h2>Information</h2>
 
             <p className="fs-lg text-muted mb-6 mb-md-0">
-              We put our money where our mouthes are. Once you're part of our
-              team, we're going to take the best possible care of you with tons
-              of benefits and perks unavailable anywhere else.
+              Enfin prêt pour changer d'assurance ? <br />
+              Mais à quel taux ? Et comment procéder...
+              <br />
+              <br />
+              Nos articles détaillées vous orienteront au cours des différentes
+              étapes de la négociation de votre prêt.
             </p>
           </div>
           <div className="col-12 col-md-6 order-md-1">
             <div className="card card-border border-success shadow-lg">
               <div className="card-body">
                 <div className="list-group list-group-flush">
-                  <div className="list-group-item d-flex align-items-center">
-                    <div className="me-auto">
-                      <p className="fw-bold mb-1">Comprehensive benefits</p>
-
-                      <p className="fs-sm text-muted mb-0">
-                        Health, dental, vision, 401k, and more.
-                      </p>
-                    </div>
-
-                    <div className="badge badge-rounded-circle bg-success-soft ms-4">
-                      <i className="fe fe-check"></i>
-                    </div>
-                  </div>
-                  <div className="list-group-item d-flex align-items-center">
-                    <div className="me-auto">
-                      <p className="fw-bold mb-1">Unlimited time off</p>
-
-                      <p className="fs-sm text-muted mb-0">
-                        Vacation on your own terms.
-                      </p>
-                    </div>
-
-                    <div className="badge badge-rounded-circle bg-success-soft ms-4">
-                      <i className="fe fe-check"></i>
-                    </div>
-                  </div>
-                  <div className="list-group-item d-flex align-items-center">
-                    <div className="me-auto">
-                      <p className="fw-bold mb-1">Cutting edge hardware</p>
-
-                      <p className="fs-sm text-muted mb-0">
-                        We provide brand new computers and phones.
-                      </p>
-                    </div>
-
-                    <div className="badge badge-rounded-circle bg-success-soft ms-4">
-                      <i className="fe fe-check"></i>
-                    </div>
-                  </div>
-                  <div className="list-group-item d-flex align-items-center">
-                    <div className="me-auto">
-                      <p className="fw-bold mb-1">Moving assistance</p>
-
-                      <p className="fs-sm text-muted mb-0">
-                        We will help you get here to work with us!
-                      </p>
-                    </div>
-
-                    <div className="badge badge-rounded-circle bg-success-soft ms-4">
-                      <i className="fe fe-check"></i>
-                    </div>
-                  </div>
+                  {information.map((info) => (
+                    <InfoElement info={info} />
+                  ))}
                 </div>
               </div>
             </div>
