@@ -1,13 +1,13 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import GuideCategory from "../../components/pages/guide/guide-category";
+import GuideList from "../../components/pages/guide/guide-list";
 
 const Guide = ({
   data: {
     allContentfulGuide: { nodes: guides },
   },
-}) => <GuideCategory guides={guides} />;
+}) => <GuideList guides={guides} />;
 
 export const query = graphql`
   {
