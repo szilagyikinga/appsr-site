@@ -5,7 +5,7 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 const FactElement = ({ fact: { title, image, link } }) => {
   return (
     <div className="col-12 col-md-4 product">
-      <Link to={link} className="card card-flush mb-7">
+      <Link to={"fact/" + link} className="card card-flush mb-7">
         <div className="card-zoom">
           <GatsbyImage
             image={image}
@@ -66,12 +66,12 @@ const FactSection = () => {
     },
     {
       image: pathToImage2,
-      title: "Questionnaire médical",
+      title: "Droit à l'oubli",
       link: "fact2",
     },
     {
       image: pathToImage3,
-      title: "Droit à l'oubli",
+      title: "Questionnaire médical",
       link: "fact3",
     },
     {
