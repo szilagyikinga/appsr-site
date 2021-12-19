@@ -29,7 +29,10 @@ const Navigation = ({ isDark = false }) => {
         </button>
 
         {/* <!-- Collapse --> */}
-        <div className="collapse navbar-collapse" id="navbarCollapse">
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarCollapse"
+        >
           {/* <!-- Toggler --> */}
           <button
             className="navbar-toggler"
@@ -42,7 +45,7 @@ const Navigation = ({ isDark = false }) => {
           >
             <i className="fe fe-x"></i>
           </button>
-          <ul className="navbar-nav m-auto">
+          <ul className="navbar-nav ">
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"
@@ -53,7 +56,7 @@ const Navigation = ({ isDark = false }) => {
                 Les guides
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link"
                 to="/information"
@@ -62,8 +65,8 @@ const Navigation = ({ isDark = false }) => {
               >
                 Informations
               </Link>
-            </li>
-            <li className="nav-item dropdown">
+            </li> */}
+            {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link"
                 to="/fact"
@@ -72,7 +75,7 @@ const Navigation = ({ isDark = false }) => {
               >
                 Fiches pratiques
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"
