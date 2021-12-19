@@ -1,8 +1,8 @@
 import baseSlugify from "slugify";
 
 const corrections = [
-  { from: "’", to: " ’ " },
-  { from: "'", to: " ' " },
+  { from: /’/g, to: " ’ " },
+  { from: /'/g, to: " ' " },
 ];
 
 const getCorrectedTitle = (title) => {
@@ -14,7 +14,7 @@ const getCorrectedTitle = (title) => {
 const slugify = (title) => {
   return baseSlugify(getCorrectedTitle(title), {
     lower: true,
-    remove: /[*+~.()'"’!?:@]/g,
+    remove: /[*+~.()'"’,!?:@]/g,
   });
 };
 

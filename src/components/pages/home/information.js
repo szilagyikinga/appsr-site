@@ -20,17 +20,16 @@ const information = [
 ];
 
 const InfoElement = ({ info: { link, title, subTitle } }) => (
-  <div className="list-group-item d-flex align-items-center">
-    <Link to={`/info/${link}`} className="me-auto info-link">
+  <Link
+    to={`/info/${link}`}
+    className="list-group-item d-flex align-items-center"
+  >
+    <div className="me-auto info-link">
       <p className="fw-bold mb-1">{title}</p>
 
       <p className="fs-sm text-muted mb-0">{subTitle}</p>
-    </Link>
-
-    {/* <div className="badge badge-rounded-circle bg-success-soft ms-4">
-      <i className="fe fe-check"></i>
-    </div> */}
-  </div>
+    </div>
+  </Link>
 );
 
 const InformationSection = () => {

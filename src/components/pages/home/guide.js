@@ -23,10 +23,6 @@ const guides = [
 
 const GuideElement = ({ guide: { link, title } }) => (
   <div className="d-flex">
-    {/* <div className="badge badge-rounded-circle bg-primary-soft mt-1 me-4">
-      <i className="fe fe-check"></i>
-    </div> */}
-
     <Link to={`/guide/${link}`} className="d-flex guide-link">
       <p>{title}</p>
     </Link>
@@ -47,7 +43,7 @@ const GuideSection = () => {
   );
   const guideImage = getImage(guideImagePath);
   return (
-    <section className="py-8 py-md-12">
+    <section className="py-8 py-md-11">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-md-6">
