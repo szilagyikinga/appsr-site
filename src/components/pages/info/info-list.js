@@ -1,16 +1,12 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import slugify from "../../services/slugify";
-import Layout from "../../components/layout";
-import Curve from "../../components/curve";
+import slugify from "../../../services/slugify";
+import Layout from "../../layout";
+import Curve from "../../curve";
 
-const Information = ({
-  data: {
-    allContentfulInfo: { nodes: infos },
-  },
-}) => (
+const Info = ({ info }) => (
   <Layout>
     <section className="pt-8 pt-md-12 pb-12 pb-md-15">
       <div className="container">
@@ -32,8 +28,8 @@ const Information = ({
           id="portfolio"
           data-isotope='{"layoutMode": "fitRows"}'
         >
-          {infos.map((info) => {
-            const { id, title, image } = info;
+          {info.map((infoItem) => {
+            const { id, title, image } = infoItem;
             const pathToImage = getImage(image);
             const slug = slugify(title);
             return (
@@ -64,18 +60,4 @@ const Information = ({
   </Layout>
 );
 
-export const query = graphql`
-  {
-    allContentfulInfo(sort: { fields: title, order: ASC }) {
-      nodes {
-        id
-        title
-        image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-        }
-      }
-    }
-  }
-`;
-
-export default Information;
+export default Info;

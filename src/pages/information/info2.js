@@ -13,7 +13,7 @@ export const query = graphql`
   {
     allContentfulInfo(
       sort: { fields: title, order: ASC }
-      filter: { content: { tags: { eq: "info_1" } } }
+      filter: { content: { tags: { eq: "info_2" } } }
     ) {
       nodes {
         id

@@ -21,7 +21,7 @@ const information = [
 
 const InfoElement = ({ info: { link, title, subTitle } }) => (
   <Link
-    to={`/info/${link}`}
+    to={`/information/${link}`}
     className="list-group-item d-flex align-items-center"
   >
     <div className="me-auto info-link">
