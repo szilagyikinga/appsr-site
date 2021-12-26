@@ -9,7 +9,7 @@ const InfoElement = ({ info: { link, title, subTitle } }) => (
     className="list-group-item d-flex align-items-center"
   >
     <div className="me-auto info-link">
-      <p className="fw-bold mb-1">{title}</p>
+      <h3 className="mb-1">{title}</h3>
 
       <p className="fs-sm text-muted mb-0">{subTitle}</p>
     </div>
@@ -22,7 +22,7 @@ const InformationSection = () => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-12 col-md-5 order-md-2">
-            <h2>Information</h2>
+            <h2 className="display-4 fw-bold mb-5">Information</h2>
 
             <p className="fs-lg text-muted mb-6 mb-md-0">
               Enfin prêt pour changer d'assurance ? <br />

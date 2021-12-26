@@ -18,7 +18,7 @@ const Blog = ({
     <Curve className="text-light" />
     <section className="py-8 py-md-11">
       <div className="container">
-        <div className="row">
+        {/* <div className="row">
           <div className="col-12">
             <h3 className="mb-0">Popular Stories</h3>
 
@@ -26,7 +26,7 @@ const Blog = ({
               Here’s what’s big in the past week!
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="row">
           {blogs.map((blog) => {
             const { id, title, image } = blog;

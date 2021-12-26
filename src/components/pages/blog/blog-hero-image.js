@@ -22,14 +22,14 @@ const BlogHeroImage = () => {
     <section className="overlay overlay-black overlay-60">
       <BackgroundImage
         Tag="div"
-        className="py-10 py-md-14  bg-cover"
+        className="pt-8 pt-md-12 pb-10 pb-md-14 bg-cover"
         {...bgImage}
         preserveStackingContext
       >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-7 text-center">
-              <h1 className="display-2 fw-bold text-white">Our Newsroom</h1>
+              <h1 className="display-1 fw-bold text-white">Blog</h1>
               <p className="lead mb-0 text-white-75">
                 Keep up to date with what we're working on! Landkit is an ever
                 evolving theme with regular updates.

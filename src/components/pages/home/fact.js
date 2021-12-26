@@ -20,7 +20,7 @@ const FactElement = ({ fact: { title, image, link } }) => {
         <div className="card-footer">
           {/* <h6 className="text-uppercase mb-1 text-muted">{title}</h6> */}
 
-          <h4 className="mb-0">{title}</h4>
+          <h3 className="mb-0">{title}</h3>
         </div>
       </Link>
     </div>
@@ -88,7 +88,7 @@ const FactSection = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8 text-center">
-            <h2>Fiches pratiques</h2>
+            <h2 className="display-4 fw-bold mb-5">Fiches pratiques</h2>
           </div>
         </div>
       </div>

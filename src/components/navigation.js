@@ -46,7 +46,7 @@ const Navigation = ({ isDark = false }) => {
             <i className="fe fe-x"></i>
           </button>
           <ul className="navbar-nav ">
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link"
                 to="/guide"
@@ -55,7 +55,7 @@ const Navigation = ({ isDark = false }) => {
               >
                 Les guides
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link"
@@ -76,6 +76,16 @@ const Navigation = ({ isDark = false }) => {
                 Fiches pratiques
               </Link>
             </li> */}
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link"
+                to="/focus"
+                activeClassName="active"
+                partiallyActive
+              >
+                Focus
+              </Link>
+            </li>
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"

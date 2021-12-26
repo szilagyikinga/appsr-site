@@ -7,7 +7,7 @@ import guides from "../../../data/guides";
 const GuideElement = ({ guide: { link, title } }) => (
   <div className="d-flex">
     <Link to={`/guide/${link}`} className="d-flex guide-link">
-      <p>{title}</p>
+      <h3>{title}</h3>
     </Link>
   </div>
 );
@@ -30,7 +30,7 @@ const GuideSection = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-md-6">
-            <h2>Les Guides.</h2>
+            <h2 className="display-4 fw-bold mb-5">Les Guides</h2>
 
             <p className="fs-lg text-gray-700 mb-6">
               Qu'est-ce qu'une délégation d'assurance ? Comment renégocier le

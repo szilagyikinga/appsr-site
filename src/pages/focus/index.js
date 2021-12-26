@@ -14,11 +14,11 @@ const Focus = ({
 }) => (
   <Layout>
     <body className="bg-light">
-      <section className="pt-8 pt-md-12 pb-8 pb-md-12">
+      <section className="py-8 py-md-12">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-8 text-center">
-              <h1 className="display-1 fw-bold">Our Work.</h1>
+              <h1 className="display-1 fw-bold">Focus</h1>
               <p className="lead text-secondary mb-4">
                 We design & build products, tools, apps, and sites for companies
                 trying to do great things for our planet.
@@ -27,7 +27,7 @@ const Focus = ({
           </div>
         </div>
       </section>
-      <section className="pb-12 pb-md-15">
+      <section className="pb-8 pb-md-11">
         <div className="container">
           <div class="row">
             {focuses.map((focus) => {

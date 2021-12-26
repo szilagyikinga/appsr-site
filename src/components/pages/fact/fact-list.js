@@ -13,7 +13,7 @@ const Fact = ({ sheets, title }) => (
         <div className="row justify-content-center">
           <div className="col-12 col-lg-10 text-center">
             <h1
-              className="display-1 fw-bold text-white"
+              className="display-2 fw-bold text-white"
               // data-aos="fade-up"
               // data-aos-delay="50"
             >

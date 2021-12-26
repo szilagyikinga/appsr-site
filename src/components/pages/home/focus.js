@@ -27,9 +27,7 @@ const FocusSection = () => {
             />
           </div>
           <div class="col-12 col-md-6">
-            <h1 class="display-1 fw-bold">
-              <div data-aos="fade-left">Focus</div>
-            </h1>
+            <h2 class="display-4 fw-bold">Focus</h2>
             <p class="fs-lg text-muted mb-0">
               Comment obtenir une assurance de prêt en cas de maladie ? La
               question nous est souvent posée car le parcours de santé peut
