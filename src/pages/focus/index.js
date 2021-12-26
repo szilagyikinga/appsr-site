@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
+import { convertToBgImage } from "gbimage-bridge";
+import BackgroundImage from "gatsby-background-image";
 
 import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
@@ -12,7 +14,7 @@ const Focus = ({
 }) => (
   <Layout>
     <body className="bg-light">
-      <section className="pt-8 pt-md-12 pb-12 pb-md-15">
+      <section className="pt-8 pt-md-12 pb-8 pb-md-12">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-8 text-center">
@@ -25,36 +27,45 @@ const Focus = ({
           </div>
         </div>
       </section>
-      <section className="py-8 py-md-11 mt-n10 mt-md-n14">
+      <section className="pb-12 pb-md-15">
         <div className="container">
-          <div
-            className="row"
-            id="portfolio"
-            data-isotope='{"layoutMode": "fitRows"}'
-          >
+          <div class="row">
             {focuses.map((focus) => {
               const { id, title, image } = focus;
               const pathToImage = getImage(image);
+              const bgImage = convertToBgImage(pathToImage);
               const slug = slugify(title);
+
               return (
-                <div key={id} className="col-12 col-md-4 product">
-                  <Link to={`${slug}`} className="card card-flush mb-7">
-                    <div className="card-zoom">
-                      <GatsbyImage
-                        image={pathToImage}
-                        alt={title}
-                        className="card-img-top rounded shadow-light-lg"
-                        placeholder="blurred"
-                      />
-                    </div>
+                <Link
+                  key={id}
+                  to={slug}
+                  className="col-12 col-md-6 col-lg-4 d-flex"
+                >
+                  <div
+                    className="overlay overlay-black overlay-30 mb-6 card bg-cover shadow-light-lg"
+                    style={{ overflow: "hidden" }}
+                  >
+                    <BackgroundImage
+                      Tag="div"
+                      className="pt-14"
+                      {...bgImage}
+                      preserveStackingContext
+                    >
+                      <div
+                        className="card-body mt-auto"
+                        style={{ textDecoration: "none" }}
+                      >
+                        <h3 className="text-white">{title}</h3>
 
-                    <div className="card-footer">
-                      {/* <h6 className="text-uppercase mb-1 text-muted">{title}</h6> */}
-
-                      <h4 className="mb-0">{title}</h4>
-                    </div>
-                  </Link>
-                </div>
+                        <p className="mb-0 text-white">
+                          A much lighter overlay work on darker photos, and is
+                          easy to control with utilities.
+                        </p>
+                      </div>
+                    </BackgroundImage>
+                  </div>
+                </Link>
               );
             })}
           </div>
