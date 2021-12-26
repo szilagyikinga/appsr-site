@@ -50,14 +50,14 @@ const Blog = ({
                     </div>
                   </Link>
 
-                  <a className="card-body" href="#!">
+                  <Link to={`${slug}`} className="card-body">
                     <h3>{title}</h3>
 
                     <p className="mb-0 text-muted">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Duis nec condimentum quam.
                     </p>
-                  </a>
+                  </Link>
                 </div>
               </div>
             );

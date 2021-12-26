@@ -10,9 +10,9 @@ const BlogSection = ({ blogs }) => (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <h3 className="mb-0">Popular Stories</h3>
+          <h3 className="mb-5">Popular Stories</h3>
 
-          <p className="mb-5 text-muted">Here’s what’s big in the past week!</p>
+          {/* <p className="mb-5 text-muted">Here’s what’s big in the past week!</p> */}
         </div>
       </div>
       <div className="row">
@@ -38,14 +38,14 @@ const BlogSection = ({ blogs }) => (
                   </div>
                 </Link>
 
-                <div className="card-body">
+                <Link to={`${slug}`} className="card-body">
                   <h3>{title}</h3>
 
                   <p className="mb-0 text-muted">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Duis nec condimentum quam.
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
           );
