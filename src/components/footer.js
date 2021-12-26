@@ -25,7 +25,7 @@ const Footer = ({ isDark }) => {
 
             <ul className="list-unstyled text-muted mb-0">
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/terms" className="text-reset">
                   Conditions générales d'utilisation
                 </a>
               </li>
