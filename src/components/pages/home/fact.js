@@ -2,6 +2,8 @@ import * as React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
+import factList from "../../../data/facts";
+
 const FactElement = ({ fact: { title, image, link } }) => {
   return (
     <div className="col-12 col-md-4 product">
@@ -61,25 +63,26 @@ const FactSection = () => {
   const facts = [
     {
       image: pathToImage1,
-      title: "Remboursement assurance de prêt",
-      link: "fact1",
+      title: factList[0].title,
+      link: factList[0].link,
     },
     {
       image: pathToImage2,
-      title: "Droit à l'oubli",
-      link: "fact2",
+      title: factList[1].title,
+      link: factList[1].link,
     },
     {
       image: pathToImage3,
-      title: "Questionnaire médical",
-      link: "fact3",
+      title: factList[2].title,
+      link: factList[2].link,
     },
     {
       image: pathToImage4,
-      title: "Assurance de prêt est refusée",
-      link: "fact4",
+      title: factList[3].title,
+      link: factList[3].link,
     },
   ];
+
   return (
     <section className="pt-4 pt-md-6 pb-4 pb-md-6">
       <div className="container">

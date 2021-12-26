@@ -1,12 +1,12 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import slugify from "../../../services/slugify";
 import Curve1 from "../../../images/curve-1.inline.svg";
 import Layout from "../../layout";
 
-const Fact = ({ sheets }) => (
+const Fact = ({ sheets, title }) => (
   <Layout darkNavigation darkFooter>
     <section className="mt-n11 pt-12 pb-8 pt-md-14 bg-black bg-pattern-2">
       <div className="container">
@@ -17,7 +17,7 @@ const Fact = ({ sheets }) => (
               // data-aos="fade-up"
               // data-aos-delay="50"
             >
-              The UI framework that you'll actually love to use.
+              {title}
             </h1>
             <p class="lead text-muted mb-9">
               We make it easy by including all of the necessary assets from
@@ -66,19 +66,5 @@ const Fact = ({ sheets }) => (
     </div>
   </Layout>
 );
-
-// export const query = graphql`
-//   {
-//     allContentfulSheet(sort: { fields: title, order: ASC }) {
-//       nodes {
-//         id
-//         title
-//         image {
-//           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
-//         }
-//       }
-//     }
-//   }
-// `;
 
 export default Fact;

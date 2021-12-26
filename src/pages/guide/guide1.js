@@ -2,12 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import GuideList from "../../components/pages/guide/guide-list";
+import guidesList from "../../data/guides";
 
 const Guide = ({
   data: {
     allContentfulGuide: { nodes: guides },
   },
-}) => <GuideList guides={guides} />;
+}) => <GuideList guides={guides} title={guidesList[0].title} />;
 
 export const query = graphql`
   {

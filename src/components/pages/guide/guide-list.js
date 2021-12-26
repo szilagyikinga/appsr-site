@@ -8,10 +8,10 @@ import Layout from "../../layout";
 import Curve from "../../curve";
 import Curve1 from "../../../images/curve-1.inline.svg";
 
-const GuideList = ({ guides }) => {
+const GuideList = ({ guides, title }) => {
   return (
     <Layout darkNavigation>
-      <GuideListHeroImage />
+      <GuideListHeroImage title={title} />
       <section className="py-8 py-md-11 mt-n10 mt-md-n14">
         <div className="container">
           <div

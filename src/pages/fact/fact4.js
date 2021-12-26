@@ -2,12 +2,13 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import FactList from "../../components/pages/fact/fact-list";
+import facts from "../../data/facts";
 
-const Guide = ({
+const Fact = ({
   data: {
     allContentfulSheet: { nodes: sheets },
   },
-}) => <FactList sheets={sheets} />;
+}) => <FactList sheets={sheets} title={facts[3].title} />;
 
 export const query = graphql`
   {
@@ -26,4 +27,4 @@ export const query = graphql`
   }
 `;
 
-export default Guide;
+export default Fact;

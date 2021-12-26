@@ -6,17 +6,14 @@ import slugify from "../../../services/slugify";
 import Layout from "../../layout";
 import Curve from "../../curve";
 
-const Info = ({ info }) => (
+const Info = ({ info, subTitle, title }) => (
   <Layout>
     <section className="pt-8 pt-md-12 pb-12 pb-md-15">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8 text-center">
-            <h1 className="display-1 fw-bold">Our Work.</h1>
-            <p className="lead text-secondary mb-4">
-              We design & build products, tools, apps, and sites for companies
-              trying to do great things for our planet.
-            </p>
+            <h1 className="display-1 fw-bold">{title}</h1>
+            <p className="lead text-secondary mb-4">{subTitle}</p>
           </div>
         </div>
       </div>

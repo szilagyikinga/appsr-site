@@ -2,24 +2,7 @@ import * as React from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
-const guides = [
-  {
-    title: "Les points à savoir",
-    link: "guide1",
-  },
-  {
-    title: "La Délégation",
-    link: "guide2",
-  },
-  {
-    title: "Les garanties",
-    link: "guide3",
-  },
-  {
-    title: "Re) Négocier",
-    link: "guide4",
-  },
-];
+import guides from "../../../data/guides";
 
 const GuideElement = ({ guide: { link, title } }) => (
   <div className="d-flex">
