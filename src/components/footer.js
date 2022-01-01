@@ -31,13 +31,8 @@ const Footer = ({ isDark }) => {
               </li>
 
               <li className="mb-3">
-                <a href="#!" className="text-reset">
+                <a href="/privacy" className="text-reset">
                   Politique de confidentialité
-                </a>
-              </li>
-              <li className="mb-3">
-                <a href="#!" className="text-reset">
-                  Utilisation de cookies
                 </a>
               </li>
             </ul>
