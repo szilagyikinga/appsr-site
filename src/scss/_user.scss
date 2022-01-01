@@ -32,7 +32,17 @@
   color: #ffffff;
 }
 
-.guide-link,
+.btn-primary-soft {
+  background-color: rgba($primary, 0.1);
+  color: $primary;
+}
+
+.btn-primary-soft:hover,
+.btn-primary-soft:focus {
+  background-color: rgba($primary, 0.15);
+  color: $primary;
+}
+
 .info-link {
   color: $black;
 }

@@ -15,7 +15,7 @@ const Blog = ({
 }) => (
   <Layout>
     <BlogHeroImage />
-    <Curve className="text-light" />
+    <Curve className="text-white" />
     <section className="py-8 py-md-11">
       <div className="container">
         {/* <div className="row">

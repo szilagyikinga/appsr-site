@@ -5,9 +5,13 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import guides from "../../../data/guides";
 
 const GuideElement = ({ guide: { link, title } }) => (
-  <div className="d-flex">
-    <Link to={`/guide/${link}`} className="d-flex guide-link">
-      <h3>{title}</h3>
+  <div className="d-flex justify-content-center">
+    <Link
+      to={`/guide/${link}`}
+      className="btn btn-primary-soft lift my-2"
+      style={{ width: "12em" }}
+    >
+      {title}
     </Link>
   </div>
 );
@@ -39,7 +43,7 @@ const GuideSection = () => {
               dédiés.
             </p>
             <div className="row">
-              <div className="col-12 col-lg-6">
+              <div className="col-12 col-lg-6 ">
                 {guides.map((guide, index) => {
                   if (index * 2 < guides.length) {
                     return <GuideElement guide={guide} />;

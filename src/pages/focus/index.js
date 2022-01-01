@@ -17,11 +17,16 @@ const Focus = ({
       <section className="py-8 py-md-12">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-12 col-md-10 col-lg-8 text-center">
-              <h1 className="display-1 fw-bold">Focus</h1>
+            <div className="col-12 col-md-10 col-lg-8">
+              <h1 className="display-3 fw-bold">
+                Assurance de prêt et maladie
+              </h1>
               <p className="lead text-secondary mb-4">
-                We design & build products, tools, apps, and sites for companies
-                trying to do great things for our planet.
+                Comment obtenir une assurance de prêt en cas de maladie ? <br />
+                La question nous est souvent posée car le parcours de santé peut
+                parfois refroidir certains assureurs. Quelques rappels sur la
+                convention AERAS et sur les solutions alternatives qui s'offrent
+                à vous.
               </p>
             </div>
           </div>

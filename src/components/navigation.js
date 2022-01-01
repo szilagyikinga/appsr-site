@@ -66,7 +66,7 @@ const Navigation = ({ isDark = false }) => {
                 Informations
               </Link>
             </li> */}
-            {/* <li className="nav-item dropdown">
+            <li className="nav-item dropdown">
               <Link
                 className="nav-link"
                 to="/fact"
@@ -75,7 +75,7 @@ const Navigation = ({ isDark = false }) => {
               >
                 Fiches pratiques
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item dropdown">
               <Link
                 className="nav-link"

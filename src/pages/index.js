@@ -4,8 +4,6 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import GuideSection from "../components/pages/home/guide";
 import InformationSection from "../components/pages/home/information";
-import FactSection from "../components/pages/home/fact";
-import FocusSection from "../components/pages/home/focus";
 import BlogSection from "../components/pages/home/blog";
 
 const IndexPage = ({
@@ -17,8 +15,6 @@ const IndexPage = ({
     <Layout>
       <GuideSection />
       <InformationSection />
-      <FactSection />
-      <FocusSection />
       <BlogSection blogs={blogs} />
     </Layout>
   );

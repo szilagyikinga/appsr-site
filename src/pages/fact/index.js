@@ -1,75 +1,52 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { graphql } from "gatsby";
 
-import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
-import Curve1 from "../../images/curve-1.inline.svg";
+import FactList from "../../components/pages/fact/fact-list";
+import facts from "../../data/facts";
 
 const Fact = ({
   data: {
     allContentfulSheet: { nodes: sheets },
   },
-}) => (
-  <Layout darkNavigation darkFooter>
-    <section className="mt-n11 pt-12 pb-8 pt-md-14 bg-black bg-pattern-2">
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-12 col-lg-10 text-center">
-            <h1
-              className="display-1 fw-bold text-white"
-              // data-aos="fade-up"
-              // data-aos-delay="50"
-            >
-              The UI framework that you'll actually love to use.
-            </h1>
-            <p class="lead text-muted mb-9">
-              We make it easy by including all of the necessary assets from
-              fonts to illustrations to icongraphy.
-            </p>
+}) => {
+  const sheets1 = sheets.filter((sheet) =>
+    sheet.content.tags.includes("sheet_1")
+  );
+  const sheets2 = sheets.filter((sheet) =>
+    sheet.content.tags.includes("sheet_2")
+  );
+  const sheets3 = sheets.filter((sheet) =>
+    sheet.content.tags.includes("sheet_3")
+  );
+  const sheets4 = sheets.filter((sheet) =>
+    sheet.content.tags.includes("sheet_4")
+  );
+
+  return (
+    <Layout>
+      <section className="mt-n11 pt-12 pb-8 pt-md-14">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-10 text-center">
+              <h1 className="display-1 fw-bold">
+                The UI framework that you'll actually love to use.
+              </h1>
+              <p className="lead text-muted mb-9">
+                We make it easy by including all of the necessary assets from
+                fonts to illustrations to icongraphy.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <div class="position-relative">
-      <div class="shape shape-bottom shape-fluid-x text-dark">
-        <Curve1 />
-      </div>
-    </div>
-    <section class="bg-gradient-dark-black py-8 py-md-11">
-      <div class="container">
-        <div className="row mt-n7">
-          {sheets.map((sheet) => {
-            const { id, title, image } = sheet;
-            const pathToImage = getImage(image);
-            const slug = slugify(title);
-            return (
-              <div key={id} className="col-12 col-md-4 product">
-                <Link to={`${slug}`} className="card card-flush mb-7">
-                  <div className="card-zoom">
-                    <GatsbyImage
-                      image={pathToImage}
-                      alt={title}
-                      className="card-img-top rounded shadow-light-lg"
-                      placeholder="blurred"
-                    />
-                  </div>
-
-                  <div className="card-footer">
-                    <h4 className="mb-0 text-white">{title}</h4>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-    <div class="bg-black">
-      <div class="container border-top border-gray-900-50"></div>
-    </div>
-  </Layout>
-);
+      </section>
+      <FactList sheets={sheets1} title={facts[0].title} />
+      <FactList sheets={sheets2} title={facts[1].title} />
+      <FactList sheets={sheets3} title={facts[2].title} />
+      <FactList sheets={sheets4} title={facts[3].title} />
+    </Layout>
+  );
+};
 
 export const query = graphql`
   {
@@ -77,6 +54,9 @@ export const query = graphql`
       nodes {
         id
         title
+        content {
+          tags
+        }
         image {
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
