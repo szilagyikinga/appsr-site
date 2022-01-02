@@ -24,7 +24,7 @@ const GuideList = ({ guides, title }) => {
               const pathToImage = getImage(image);
               const slug = slugify(title);
               return (
-                <div key={id} className="col-12 col-md-6 col-lg-4 d-flex">
+                <div key={id} className="col-12 col-md-6 col-lg-4 d-flex mb-8">
                   <div className="card mb-6 mb-lg-0 shadow-light-lg">
                     <Link to={`/guide/${slug}`} className="card-img-top">
                       <GatsbyImage

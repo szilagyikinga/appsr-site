@@ -53,7 +53,7 @@ const Focus = ({
                   >
                     <BackgroundImage
                       Tag="div"
-                      className="pt-14"
+                      className="py-8"
                       {...bgImage}
                       preserveStackingContext
                     >
@@ -61,12 +61,9 @@ const Focus = ({
                         className="card-body mt-auto"
                         style={{ textDecoration: "none" }}
                       >
-                        <h3 className="text-white">{title}</h3>
-
-                        <p className="mb-0 text-white">
-                          A much lighter overlay work on darker photos, and is
-                          easy to control with utilities.
-                        </p>
+                        <h3 className="display-5 text-white fw-bold text-center">
+                          {title}
+                        </h3>
                       </div>
                     </BackgroundImage>
                   </div>
