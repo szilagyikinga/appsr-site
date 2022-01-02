@@ -10,7 +10,7 @@ const BlogSection = ({ blogs }) => (
     <div className="container">
       <div className="row">
         <div className="col-12">
-          <h2 className="display-4 fw-bold mb-5">Le blog</h2>
+          <h2 className="display-5 fw-bold mb-5">En direct du blog</h2>
 
           {/* <p className="mb-5 text-muted">Here’s what’s big in the past week!</p> */}
         </div>

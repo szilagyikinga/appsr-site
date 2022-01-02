@@ -22,7 +22,7 @@ const InformationSection = () => {
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-12 col-md-5 order-md-2">
-            <h2 className="display-4 fw-bold mb-5">Information</h2>
+            <h2 className="display-5 fw-bold mb-5">À vous de jouer</h2>
 
             <p className="fs-lg text-muted mb-6 mb-md-0">
               Enfin prêt pour changer d'assurance ? <br />

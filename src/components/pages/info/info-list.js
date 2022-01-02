@@ -12,7 +12,7 @@ const Info = ({ info, subTitle, title }) => (
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 col-lg-8 text-center">
-            <h1 className="display-2 fw-bold">{title}</h1>
+            <h1 className="display-4 fw-bold">{title}</h1>
             <p className="lead text-secondary mb-4">{subTitle}</p>
           </div>
         </div>

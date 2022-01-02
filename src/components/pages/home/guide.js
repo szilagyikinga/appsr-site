@@ -34,13 +34,16 @@ const GuideSection = () => {
       <div className="container">
         <div className="row align-items-center">
           <div className="col-12 col-md-6">
-            <h2 className="display-4 fw-bold mb-5">Les Guides</h2>
+            <h1 className="display-5 fw-bold mb-5">L'appsr en quelques mots</h1>
 
             <p className="fs-lg text-gray-700 mb-6">
-              Qu'est-ce qu'une délégation d'assurance ? Comment renégocier le
-              taux de son assurance ? Retrouvez toutes les informations
-              détaillées sur l'assurance de prêt au travers de nos quatre guides
-              dédiés.
+              Pas toujours simple de s'y retrouver quand on cherche à changer
+              d'assurance... ou tout simplement à s'informer. Aider et favoriser
+              l'accès en matière de prévoyance, de santé, de retraite et
+              d'épargne, voilà quelques uns de nos objectifs. <br />
+              <br />
+              Pour y voir plus clair, nous vous proposons de vous informer au
+              travers de nos quatre guides dédiés :
             </p>
             <div className="row">
               <div className="col-12 col-lg-6 ">

@@ -36,11 +36,6 @@ const GuideList = ({ title }) => {
             <div className="row justify-content-center">
               <div className="col-12 col-md-10 col-lg-7 text-center">
                 <h1 className="display-2 fw-bold text-white">{title}</h1>
-
-                <p className="lead text-white-75 mb-4">
-                  We design & build products, tools, apps, and sites for
-                  companies trying to do great things for our planet.
-                </p>
               </div>
             </div>
           </div>

@@ -29,13 +29,7 @@ const Fact = ({
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-12 col-lg-10 text-center">
-              <h1 className="display-1 fw-bold">
-                The UI framework that you'll actually love to use.
-              </h1>
-              <p className="lead text-muted mb-9">
-                We make it easy by including all of the necessary assets from
-                fonts to illustrations to icongraphy.
-              </p>
+              <h1 className="display-3 fw-bold">Fiches pratiques</h1>
             </div>
           </div>
         </div>

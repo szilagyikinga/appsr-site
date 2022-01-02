@@ -30,10 +30,6 @@ const BlogHeroImage = () => {
           <div className="row justify-content-center">
             <div className="col-12 col-md-10 col-lg-7 text-center">
               <h1 className="display-1 fw-bold text-white">Le blog</h1>
-              <p className="lead mb-0 text-white-75">
-                Keep up to date with what we're working on! Landkit is an ever
-                evolving theme with regular updates.
-              </p>
             </div>
           </div>
         </div>
