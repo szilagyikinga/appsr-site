@@ -62,3 +62,8 @@ a:hover {
 a:active {
   text-decoration: none;
 }
+
+.revert {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}

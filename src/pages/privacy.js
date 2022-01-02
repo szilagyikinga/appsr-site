@@ -578,7 +578,10 @@ const PrivacyPolicy = () => {
                   </h6>
 
                   <p className="fs-sm mb-0">
-                    <a href="mailto:contact@appsr.fr" className="text-reset">
+                    <a
+                      href="mailto:contact@appsr.fr"
+                      className="text-reset revert"
+                    >
                       contact@appsr.fr
                     </a>
                   </p>
