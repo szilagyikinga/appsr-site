@@ -28,7 +28,7 @@ const GuideList = ({ title }) => {
       >
         <BackgroundImage
           Tag="div"
-          className="pt-12 pt-md-14 pb-12 pb-md-15"
+          className="pt-12 pt-md-14 pb-12 pb-md-14"
           {...bgImage}
           preserveStackingContext
         >

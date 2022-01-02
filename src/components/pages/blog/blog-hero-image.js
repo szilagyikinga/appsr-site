@@ -22,7 +22,7 @@ const BlogHeroImage = () => {
     <section className="overlay overlay-black overlay-60">
       <BackgroundImage
         Tag="div"
-        className="pt-8 pt-md-12 pb-10 pb-md-14 bg-cover"
+        className="pt-8 pt-md-10 pb-10 pb-md-10 bg-cover"
         {...bgImage}
         preserveStackingContext
       >

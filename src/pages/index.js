@@ -32,6 +32,7 @@ export const query = graphql`
         content {
           tags
         }
+        excert
         image {
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }

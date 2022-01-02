@@ -25,10 +25,7 @@ export const query = graphql`
       }
       title
       content {
-        ingredients
-        instructions
         tags
-        tools
       }
       description {
         description

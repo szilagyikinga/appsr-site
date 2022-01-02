@@ -11,13 +11,11 @@ const BlogSection = ({ blogs }) => (
       <div className="row">
         <div className="col-12">
           <h2 className="display-5 fw-bold mb-5">En direct du blog</h2>
-
-          {/* <p className="mb-5 text-muted">Here’s what’s big in the past week!</p> */}
         </div>
       </div>
       <div className="row">
         {blogs.map((blog) => {
-          const { id, title, image } = blog;
+          const { id, title, image, excert } = blog;
           const pathToImage = getImage(image);
           const slug = slugify(title);
           return (
@@ -38,13 +36,10 @@ const BlogSection = ({ blogs }) => (
                   </div>
                 </Link>
 
-                <Link to={`${slug}`} className="card-body">
+                <Link to={`blog/${slug}`} className="card-body">
                   <h3>{title}</h3>
 
-                  <p className="mb-0 text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Duis nec condimentum quam.
-                  </p>
+                  <p className="mb-0 text-muted">{excert}</p>
                 </Link>
               </div>
             </div>

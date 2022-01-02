@@ -18,18 +18,9 @@ const Blog = ({
     <Curve className="text-white" />
     <section className="py-8 py-md-11">
       <div className="container">
-        {/* <div className="row">
-          <div className="col-12">
-            <h3 className="mb-0">Popular Stories</h3>
-
-            <p className="mb-5 text-muted">
-              Here’s what’s big in the past week!
-            </p>
-          </div>
-        </div> */}
         <div className="row">
           {blogs.map((blog) => {
-            const { id, title, image } = blog;
+            const { id, title, image, excert } = blog;
             const pathToImage = getImage(image);
             const slug = slugify(title);
             return (
@@ -53,10 +44,7 @@ const Blog = ({
                   <Link to={`${slug}`} className="card-body">
                     <h3>{title}</h3>
 
-                    <p className="mb-0 text-muted">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Duis nec condimentum quam.
-                    </p>
+                    <p className="mb-0 text-muted">{excert}&nbsp;...</p>
                   </Link>
                 </div>
               </div>
@@ -81,6 +69,7 @@ export const query = graphql`
         content {
           tags
         }
+        excert
         image {
           gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
         }
