@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import Layout from "../components/layout";
-import Curve1 from "../images/curve-1.inline.svg";
 
 const PrivacyPolicy = () => {
   return (
@@ -589,12 +588,6 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </section>
-
-      <div className="position-relative">
-        <div className="shape shape-bottom shape-fluid-x text-dark">
-          <Curve1 className="text-black" />
-        </div>
-      </div>
     </Layout>
   );
 };

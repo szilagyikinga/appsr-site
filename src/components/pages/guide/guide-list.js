@@ -43,43 +43,9 @@ const GuideList = ({ guides, title }) => {
 
                     <Link to={`/guide/${slug}`} className="card-body">
                       <h3>{title}</h3>
-
-                      {/* <p className="mb-0 text-muted">
-                        The markup for this card is identical to that for the
-                        50% Width article above.
-                      </p> */}
                     </Link>
                   </div>
                 </div>
-                // <div key={id} className="col-12 col-md-4 resources">
-                //   <Link
-                //     to={`/guide/${slug}`}
-                //     className="card shadow-light-lg mb-7"
-                //   >
-                //     <div className="card-zoom">
-                //       <GatsbyImage
-                //         image={pathToImage}
-                //         alt={title}
-                //         className="card-img"
-                //         placeholder="blurred"
-                //       />
-                //     </div>
-
-                //     <div className="card-img-overlay card-img-overlay-hover">
-                //       <div className="card-body bg-white">
-                //         <div className="shape shape-bottom-100 shape-fluid-x text-white">
-                //           <Curve1 />
-                //         </div>
-
-                //         <h6 className="text-uppercase mb-1 text-muted">
-                //           {guide.title}
-                //         </h6>
-
-                //         <h4 className="mb-0">Curology Any Face Campaign</h4>
-                //       </div>
-                //     </div>
-                //   </Link>
-                // </div>
               );
             })}
           </div>

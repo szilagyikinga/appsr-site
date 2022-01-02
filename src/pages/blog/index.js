@@ -4,7 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
-import Curve from "../../components/curve";
 import BlogHeroImage from "../../components/pages/blog/blog-hero-image";
 import Curve3 from "../../images/curve-3.inline.svg";
 
@@ -13,10 +12,10 @@ const Blog = ({
     allContentfulBlog: { nodes: blogs },
   },
 }) => (
-  <Layout>
+  <Layout darkNavigation>
     <BlogHeroImage />
-    <Curve className="text-white" />
-    <section className="py-8 py-md-11">
+
+    <section className="py-8 py-md-12 mt-n10 mt-md-n14">
       <div className="container">
         <div className="row">
           {blogs.map((blog) => {
@@ -44,7 +43,7 @@ const Blog = ({
                   <Link to={`${slug}`} className="card-body">
                     <h3>{title}</h3>
 
-                    <p className="mb-0 text-muted">{excert}&nbsp;...</p>
+                    <p className="mb-0 text-muted">{excert}</p>
                   </Link>
                 </div>
               </div>
@@ -53,7 +52,6 @@ const Blog = ({
         </div>
       </div>
     </section>
-    <Curve className="text-gray-200" />
   </Layout>
 );
 

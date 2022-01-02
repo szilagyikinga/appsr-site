@@ -38,7 +38,6 @@ const BlogSection = ({ blogs }) => (
 
                 <Link to={`blog/${slug}`} className="card-body">
                   <h3>{title}</h3>
-
                   <p className="mb-0 text-muted">{excert}</p>
                 </Link>
               </div>

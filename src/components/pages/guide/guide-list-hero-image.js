@@ -4,7 +4,7 @@ import { getImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
 
-import Curve1 from "../../../images/curve-1.inline.svg";
+import Curve from "../../curve";
 
 const GuideList = ({ title }) => {
   const { placeholderImage } = useStaticQuery(
@@ -28,7 +28,7 @@ const GuideList = ({ title }) => {
       >
         <BackgroundImage
           Tag="div"
-          className="pt-12 pt-md-14 pb-12 pb-md-14"
+          className="pt-11 pt-md-14 pb-11 pb-md-14"
           {...bgImage}
           preserveStackingContext
         >
@@ -41,11 +41,7 @@ const GuideList = ({ title }) => {
           </div>
         </BackgroundImage>
       </section>
-      <div className="position-relative">
-        <div className="shape shape-bottom shape-fluid-x text-light">
-          <Curve1 />
-        </div>
-      </div>
+      <Curve className="text-white" />
     </>
   );
 };
