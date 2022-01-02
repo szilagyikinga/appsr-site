@@ -31,7 +31,10 @@ const Info = ({ info, subTitle, title }) => (
             const slug = slugify(title);
             return (
               <div key={id} className="col-12 col-md-4 product">
-                <Link to={`${slug}`} className="card card-flush mb-7">
+                <Link
+                  to={`/information/${slug}`}
+                  className="card card-flush mb-7"
+                >
                   <div className="card-zoom">
                     <GatsbyImage
                       image={pathToImage}

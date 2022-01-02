@@ -14,7 +14,7 @@ export const query = graphql`
   {
     allContentfulGuide(
       sort: { fields: title, order: ASC }
-      filter: { content: { tags: { eq: "guide_2" } } }
+      filter: { content: { tags: { eq: "guide_4" } } }
     ) {
       nodes {
         id
