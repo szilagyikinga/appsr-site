@@ -46,7 +46,8 @@ const TermsOfServices = () => {
                 immatriculée au registre suivant&nbsp;: RNA&nbsp;: W751202246.
               </p>
               <p className="text-gray-800">
-                Adresse e-mail&nbsp;: contact@appsr.fr.
+                Adresse e-mail&nbsp;:{" "}
+                <span className="text-reset revert">rf.rsppa@olleh</span>
               </p>
               <p className="text-gray-800">
                 <br />
@@ -79,10 +80,11 @@ const TermsOfServices = () => {
                 Pour toute question ou demande d'information concernant le site,
                 ou tout signalement de contenu ou d'activités illicites,
                 l'utilisateur peut contacter l'éditeur à l'adresse e-mail
-                suivante: contact@appsr.fr ou adresser un courrier recommandé
-                avec accusé de réception à&nbsp;: Association de Promotion de
-                Prévoyance, Santé et Retraite (APPSR) - 120 avenue du général
-                Leclerc 75014 Paris
+                suivante:
+                <span className="text-reset revert">rf.rsppa@olleh</span> ou
+                adresser un courrier recommandé avec accusé de réception
+                à&nbsp;: Association de Promotion de Prévoyance, Santé et
+                Retraite (APPSR) - 120 avenue du général Leclerc 75014 Paris
               </p>
               <p className="text-gray-800">
                 <h3 className="mb-5">
@@ -134,7 +136,7 @@ const TermsOfServices = () => {
                 <p className="text-gray-800 mb-6 mb-md-0">
                   Suspendre, interrompre ou limiter l'accès à tout ou partie du
                   site, réserver l'accès au site, ou à certaines parties du
-                  site, à une catégorie déterminée d'internaute&nbsp;;
+                  site, à une catégorie déterminée d'internaute
                   <br />
                   <br />
                 </p>
@@ -148,7 +150,7 @@ const TermsOfServices = () => {
                   Supprimer toute information pouvant en perturber le
                   fonctionnement ou entrant en contravention avec les lois
                   nationales ou internationales, ou avec les règles de la
-                  Nétiquette&nbsp;;
+                  Nétiquette
                   <br />
                   <br />
                 </p>
@@ -182,7 +184,7 @@ const TermsOfServices = () => {
                 <p className="text-gray-800 mb-6 mb-md-0">
                   En cas de problématiques ou défaillances techniques,
                   informatiques ou de compatibilité du site avec un matériel ou
-                  logiciel quel qu'il soit&nbsp;;
+                  logiciel quel qu'il soit
                   <br />
                   <br />
                 </p>
@@ -195,7 +197,7 @@ const TermsOfServices = () => {
                 <p className="text-gray-800 mb-6 mb-md-0">
                   Des dommages directs ou indirects, matériels ou immatériels,
                   prévisibles ou imprévisibles résultant de l'utilisation ou des
-                  difficultés d'utilisation du site ou de ses services&nbsp;;
+                  difficultés d'utilisation du site ou de ses services
                   <br />
                   <br />
                 </p>
@@ -208,7 +210,7 @@ const TermsOfServices = () => {
                 <p className="text-gray-800 mb-6 mb-md-0">
                   Des caractéristiques intrinsèques de l'Internet, notamment
                   celles relatives au manque de fiabilité et au défaut de
-                  sécurisation des informations y circulant&nbsp;;
+                  sécurisation des informations y circulant
                   <br />
                   <br />
                 </p>
@@ -245,7 +247,7 @@ const TermsOfServices = () => {
                   <i className="fe fe-check"></i>
                 </span>
                 <p className="text-gray-800 mb-6 mb-md-0">
-                  De la protection de son matériel et de ses données&nbsp;;
+                  De la protection de son matériel et de ses données
                   <br />
                   <br />
                 </p>
@@ -256,7 +258,7 @@ const TermsOfServices = () => {
                   <i className="fe fe-check"></i>
                 </span>
                 <p className="text-gray-800 mb-6 mb-md-0">
-                  De l'utilisation qu'il fait du site ou de ses services&nbsp;;
+                  De l'utilisation qu'il fait du site ou de ses services
                   <br />
                   <br />
                 </p>
@@ -434,7 +436,7 @@ const TermsOfServices = () => {
                       href="mailto:contact@appsr.fr"
                       className="text-reset revert"
                     >
-                      rf.rsppa@tcatnoc
+                      rf.rsppa@olleh
                     </a>
                   </p>
                 </div>

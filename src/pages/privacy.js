@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
 
               <p className="text-gray-800">
                 Cette politique de confidentialité s'applique au site&nbsp;:
-                APPSR. <br />
+                APPSR.FR <br />
                 <br />
               </p>
               <p className="text-gray-800">
@@ -41,7 +41,7 @@ const PrivacyPolicy = () => {
                   personnelles toutes les données étant susceptibles
                   d'identifier un utilisateur. Il s'agit notamment du prénom et
                   du nom, de l'âge, de l'adresse postale, l'adresse mail, la
-                  localisation de l'utilisateur ou encore son adresse IP&nbsp;;
+                  localisation de l'utilisateur ou encore son adresse IP
                 </li>
               </ul>
               <ul className="text-gray-800">
@@ -53,11 +53,11 @@ const PrivacyPolicy = () => {
               <ul className="text-gray-800">
                 <li>
                   Qui est responsable du traitement des données à caractère
-                  personnel collectées et traitées&nbsp;;
+                  personnel collectées et traitées
                 </li>
               </ul>
               <ul className="text-gray-800">
-                <li>A qui ces données sont transmises&nbsp;;</li>
+                <li>A qui ces données sont transmises</li>
               </ul>
               <ul className="text-gray-800">
                 <li>
@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
                 et les Conditions Générales d'Utilisation que les utilisateurs
                 peuvent consulter à l'adresse ci-après&nbsp;:
               </p>
-              <p className="text-gray-800">https://www.appsr.fr</p>
+              <p className="text-gray-800">https://www.appsr.fr/terms/</p>
               <h3 className="mb-5">
                 ARTICLE 2. PRINCIPES GÉNÉRAUX EN MATIÈRE DE COLLECTE ET DE
                 TRAITEMENT DE DONNÉES
@@ -82,7 +82,7 @@ const PrivacyPolicy = () => {
                   l'utilisateur propriétaire des données. A chaque fois que des
                   données à caractère personnel seront collectées, il sera
                   indiqué à l'utilisateur que ses données sont collectées, et
-                  pour quelles raisons ses données sont collectées&nbsp;;
+                  pour quelles raisons ses données sont collectées
                 </li>
               </ul>
               <ul className="text-gray-800">
@@ -90,15 +90,14 @@ const PrivacyPolicy = () => {
                   Finalités limitées&nbsp;: la collecte et le traitement des
                   données sont exécutés pour répondre à un ou plusieurs
                   objectifs déterminés dans les présentes conditions générales
-                  d'utilisation&nbsp;;
+                  d'utilisation
                 </li>
               </ul>
               <ul className="text-gray-800">
                 <li>
                   Minimisation de la collecte et du traitement des
                   données&nbsp;: seules les données nécessaires à la bonne
-                  exécution des objectifs poursuivis par le site sont
-                  collectées&nbsp;;
+                  exécution des objectifs poursuivis par le site sont collectées
                 </li>
               </ul>
               <ul className="text-gray-800">
@@ -107,7 +106,7 @@ const PrivacyPolicy = () => {
                   données sont conservées pour une durée limitée, dont
                   l'utilisateur est informé. Lorsque cette information ne peut
                   pas être communiquée, l'utilisateur est informé des critères
-                  utilisés pour déterminer la durée de conservation&nbsp;;
+                  utilisés pour déterminer la durée de conservation
                 </li>
               </ul>
               <ul className="text-gray-800">
@@ -125,34 +124,31 @@ const PrivacyPolicy = () => {
                 l'article 6 du règlement européen 2016/679, la collecte et le
                 traitement des données à caractère personnel ne pourront
                 intervenir que s'ils respectent au moins l'une des conditions
-                ci-après énumérées&nbsp;:
+                ci-après énumérées
               </p>
               <ul className="text-gray-800">
-                <li>
-                  L'utilisateur a expressément consenti au traitement&nbsp;;
-                </li>
+                <li>L'utilisateur a expressément consenti au traitement</li>
               </ul>
               <ul className="text-gray-800">
                 <li>
-                  Le traitement est nécessaire à la bonne exécution d'un
-                  contrat&nbsp;;
+                  Le traitement est nécessaire à la bonne exécution d'un contrat
                 </li>
               </ul>
               <ul className="text-gray-800">
-                <li>Le traitement répond à une obligation légale&nbsp;;</li>
+                <li>Le traitement répond à une obligation légale</li>
               </ul>
               <ul className="text-gray-800">
                 <li>
                   Le traitement s'explique par une nécessité liée à la
                   sauvegarde des intérêts vitaux de la personne concernée ou
-                  d'une autre personne physique&nbsp;;
+                  d'une autre personne physique
                 </li>
               </ul>
               <ul className="text-gray-800">
                 <li>
                   Le traitement peut s'expliquer par une nécessité liée à
                   l'exécution d'une mission d'intérêt public ou qui relève de
-                  l'exercice de l'autorité publique&nbsp;;
+                  l'exercice de l'autorité publique
                 </li>
               </ul>
               <ul className="text-gray-800">
@@ -538,7 +534,7 @@ const PrivacyPolicy = () => {
                 tout moment à l'adresse ci-après indiquée&nbsp;:
               </p>
               <p style={{ paddingLeft: "30px" }} className="text-gray-800">
-                https://www.appsr.fr/privacy-policy
+                https://www.appsr.fr/privacy
               </p>
               <p className="text-gray-800">
                 L'éditeur du site se réserve le droit de la modifier afin de
@@ -582,7 +578,7 @@ const PrivacyPolicy = () => {
                       href="mailto:contact@appsr.fr"
                       className="text-reset revert"
                     >
-                      rf.rsppa@tcatnoc
+                      rf.rsppa@olleh
                     </a>
                   </p>
                 </div>
