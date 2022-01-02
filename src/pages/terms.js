@@ -430,8 +430,11 @@ const TermsOfServices = () => {
                   </h6>
 
                   <p className="fs-sm mb-0">
-                    <a href="mailto:contact@appsr.fr" className="text-reset">
-                      contact@appsr.fr
+                    <a
+                      href="mailto:contact@appsr.fr"
+                      className="text-reset revert"
+                    >
+                      rf.rsppa@tcatnoc
                     </a>
                   </p>
                 </div>

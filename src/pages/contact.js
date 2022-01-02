@@ -93,25 +93,21 @@ const Contact = () => {
             </div>
             <div className="col-12 col-md-6 pb-6 pb-md-8">
               <h2 className="fw-bold text-center mb-2">
-                Contact us for anything.
+                Formulaire de contact
               </h2>
-
-              <p className="fs-lg text-center text-muted mb-0">
-                Our goal is to be as helpful as possible.
-              </p>
 
               <hr className="hr-sm my-4 my-md-6 mx-auto bg-gray-300" />
 
               <form onSubmit={onSubmit}>
                 <div className="form-group mb-3">
                   <label className="form-label" htmlFor="name">
-                    Full name
+                    Nom et prénom
                   </label>
                   <input
                     className="form-control"
                     id="name"
                     type="text"
-                    placeholder="Full name"
+                    placeholder=""
                     value={values["name"]}
                     onChange={onChange("name")}
                   />
@@ -125,25 +121,25 @@ const Contact = () => {
                     className="form-control"
                     id="email"
                     type="email"
-                    placeholder="hello@domain.com"
+                    placeholder=""
                     value={values["email"]}
                     onChange={onChange("email")}
                   />
                 </div>
                 <div className="form-group mb-5">
-                  <label htmlFor="message">What can we help you with?*</label>
+                  <label htmlFor="message">Quelle est votre question ?*</label>
                   <textarea
                     className="form-control"
                     id="message"
                     rows="5"
-                    placeholder="Tell us what we can help you with!"
+                    placeholder=""
                     value={values["message"]}
                     onChange={onChange("message")}
                   ></textarea>
                 </div>
                 <div className="form-group mb-0">
                   <button className="btn w-100 btn-primary lift" type="submit">
-                    Send message
+                    Envoyer mon message
                   </button>
                 </div>
               </form>

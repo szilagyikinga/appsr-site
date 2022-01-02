@@ -582,7 +582,7 @@ const PrivacyPolicy = () => {
                       href="mailto:contact@appsr.fr"
                       className="text-reset revert"
                     >
-                      contact@appsr.fr
+                      rf.rsppa@tcatnoc
                     </a>
                   </p>
                 </div>
