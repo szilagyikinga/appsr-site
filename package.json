@@ -12,10 +12,12 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "develop:netlify": "netlify dev"
   },
   "dependencies": {
     "@popperjs/core": "^2.10.1",
+    "@sendgrid/mail": "^7.6.0",
     "bootstrap": "^5.1.1",
     "gatsby": "^3.13.1",
     "gatsby-background-image": "^1.5.3",
@@ -34,6 +36,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
+    "react-toastify": "^8.1.0",
     "sass": "^1.42.1",
     "slugify": "^1.6.1"
   }

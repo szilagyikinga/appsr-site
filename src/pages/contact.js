@@ -1,12 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
 import { convertToBgImage } from "gbimage-bridge";
 import BackgroundImage from "gatsby-background-image";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 import Layout from "../components/layout";
+import {
+  message,
+  formError,
+  serverError,
+  formSuccess,
+} from "../services/toast";
+
+const defaultValues = {
+  name: "",
+  email: "",
+  message: "",
+};
 
 const Contact = () => {
+  const [values, setValues] = useState({ ...defaultValues });
   const { placeholderImage1, placeholderImage2 } = useStaticQuery(
     graphql`
       query {
@@ -26,6 +42,37 @@ const Contact = () => {
   const image1 = getImage(placeholderImage1);
   const image2 = getImage(placeholderImage2);
   const bgImage1 = convertToBgImage(image1);
+
+  const onChange = (key) => (e) => {
+    setValues({
+      ...values,
+      [key]: e.target.value,
+    });
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!values.email || !values.message) {
+      message("error", formError);
+    } else {
+      try {
+        const response = await fetch("/.netlify/functions/sendmail", {
+          method: "POST",
+          body: JSON.stringify(values),
+        });
+
+        if (response.status === 200) {
+          message("success", formSuccess);
+          setValues(defaultValues);
+        } else {
+          message("error", serverError);
+        }
+      } catch (e) {
+        message("error", serverError);
+      }
+    }
+  };
   return (
     <Layout full>
       <section>
@@ -43,11 +90,8 @@ const Contact = () => {
                 className="d-md-none img-cover"
                 alt=""
               />
-              {/* <img src={ImageSmall} className="d-md-none img-cover" alt="" /> */}
-
-              {/* <div className="d-none d-md-block vw-50 h-100 float-end bg-cover" style="background-image: url(assets/img/covers/cover-10.jpg);"></div> */}
             </div>
-            <div className="col-12 col-md-6 py-8 py-md-11">
+            <div className="col-12 col-md-6 pb-6 pb-md-8">
               <h2 className="fw-bold text-center mb-2">
                 Contact us for anything.
               </h2>
@@ -56,53 +100,58 @@ const Contact = () => {
                 Our goal is to be as helpful as possible.
               </p>
 
-              <hr className="hr-sm my-6 my-md-8 mx-auto bg-gray-300" />
+              <hr className="hr-sm my-4 my-md-6 mx-auto bg-gray-300" />
 
-              <form>
-                <div className="form-group mb-5">
-                  <label className="form-label" for="contactName">
+              <form onSubmit={onSubmit}>
+                <div className="form-group mb-3">
+                  <label className="form-label" htmlFor="name">
                     Full name
                   </label>
-
                   <input
                     className="form-control"
-                    id="contactName"
+                    id="name"
                     type="text"
                     placeholder="Full name"
+                    value={values["name"]}
+                    onChange={onChange("name")}
                   />
                 </div>
-                <div className="form-group mb-5">
-                  <label className="form-label" for="contactEmail">
-                    Email
+                <div className="form-group mb-3">
+                  <label className="form-label" htmlFor="email">
+                    Email*
                   </label>
 
                   <input
                     className="form-control"
-                    id="contactEmail"
+                    id="email"
                     type="email"
                     placeholder="hello@domain.com"
+                    value={values["email"]}
+                    onChange={onChange("email")}
                   />
                 </div>
-                <div className="form-group mb-5 d-none">
-                  <label for="contactMessage">What can we help you with?</label>
-
+                <div className="form-group mb-5">
+                  <label htmlFor="message">What can we help you with?*</label>
                   <textarea
                     className="form-control"
-                    id="contactMessage"
+                    id="message"
                     rows="5"
                     placeholder="Tell us what we can help you with!"
+                    value={values["message"]}
+                    onChange={onChange("message")}
                   ></textarea>
                 </div>
                 <div className="form-group mb-0">
-                  <a href="#!" className="btn w-100 btn-primary lift">
+                  <button className="btn w-100 btn-primary lift" type="submit">
                     Send message
-                  </a>
+                  </button>
                 </div>
               </form>
             </div>
           </div>
         </div>
       </section>
+      <ToastContainer />
     </Layout>
   );
 };
