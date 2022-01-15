@@ -365,49 +365,6 @@ const TermsOfServices = () => {
                 parties, seuls les tribunaux de la ville de Paris sont
                 compétents.
               </p>
-              <h3 className="mb-5">Additional Terms</h3>
-
-              <p className="text-gray-800">
-                By visiting and/or taking any action on Bootstrap Themes, you
-                confirm that you are in agreement with and bound by the terms
-                outlined below. These terms apply to the website, emails, or any
-                other communication.
-              </p>
-
-              <div className="d-flex">
-                <span className="badge badge-rounded-circle bg-success-soft mt-1 me-4">
-                  <i className="fe fe-check"></i>
-                </span>
-
-                <p className="text-gray-800">
-                  All payments are processed securely through PayPal or Stripe.
-                  Bootstrap Themes does not directly process payments through
-                  the website.
-                </p>
-              </div>
-              <div className="d-flex">
-                <span className="badge badge-rounded-circle bg-success-soft mt-1 me-4">
-                  <i className="fe fe-check"></i>
-                </span>
-
-                <p className="text-gray-800">
-                  You have 14 days to evaluate your purchase. If your purchase
-                  fails to meet expectations set by the seller, or is critically
-                  flawed in some way, contact Bootstrap Themes and we will issue
-                  a full refund pending a review.
-                </p>
-              </div>
-              <div className="d-flex">
-                <span className="badge badge-rounded-circle bg-success-soft mt-1 me-4">
-                  <i className="fe fe-check"></i>
-                </span>
-
-                <p className="text-gray-800 mb-6 mb-md-0">
-                  Membership is a benefit for those who follow our terms and
-                  policies. We may at any time suspend or terminate your
-                  account.
-                </p>
-              </div>
             </div>
             <div className="col-12 col-md-4">
               <div className="card shadow-light-lg">
