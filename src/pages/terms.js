@@ -42,7 +42,7 @@ const TermsOfServices = () => {
               <p className="text-gray-800">
                 Association de Promotion de Prévoyance, Santé et Retraite
                 (APPSR), dont le siège social est situé à l'adresse
-                suivante&nbsp;: 120 avenue du général Leclerc 75014 Paris, et
+                suivante&nbsp;: 1-3, rue d'Enghien – 75002 PARIS, et
                 immatriculée au registre suivant&nbsp;: RNA&nbsp;: W751202246.
               </p>
               <p className="text-gray-800">
@@ -84,7 +84,7 @@ const TermsOfServices = () => {
                 <span className="text-reset revert">rf.rsppa@olleh</span> ou
                 adresser un courrier recommandé avec accusé de réception
                 à&nbsp;: Association de Promotion de Prévoyance, Santé et
-                Retraite (APPSR) - 120 avenue du général Leclerc 75014 Paris
+                Retraite (APPSR) - 1-3, rue d'Enghien – 75002 PARIS
               </p>
               <p className="text-gray-800">
                 <h3 className="mb-5">
@@ -379,9 +379,9 @@ const TermsOfServices = () => {
                   <p className="fs-sm mb-5">
                     APPSR
                     <br />
-                    120 avenue du général Leclerc
+                    1-3, rue d'Enghien
                     <br />
-                    75014 Paris
+                    75002 PARIS
                   </p>
 
                   <h6 className="fw-bold text-uppercase text-gray-700 mb-2">

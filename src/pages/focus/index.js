@@ -1,11 +1,10 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
-import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image";
 
 import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
+import BgImage from "../../components/bg-image";
 
 const Focus = ({
   data: {
@@ -38,7 +37,6 @@ const Focus = ({
             {focuses.map((focus) => {
               const { id, title, image } = focus;
               const pathToImage = getImage(image);
-              const bgImage = convertToBgImage(pathToImage);
               const slug = slugify(title);
 
               return (
@@ -51,11 +49,10 @@ const Focus = ({
                     className="overlay overlay-black overlay-30 mb-6 card bg-cover shadow-light-lg"
                     style={{ overflow: "hidden" }}
                   >
-                    <BackgroundImage
+                    <BgImage
+                      image={pathToImage}
                       Tag="div"
                       className="py-8"
-                      {...bgImage}
-                      preserveStackingContext
                     >
                       <div
                         className="card-body mt-auto"
@@ -65,7 +62,7 @@ const Focus = ({
                           {title}
                         </h3>
                       </div>
-                    </BackgroundImage>
+                    </BgImage>
                   </div>
                 </Link>
               );

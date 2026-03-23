@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image";
 import { ToastContainer } from "react-toastify";
+
+import BgImage from "../components/bg-image";
 
 import "react-toastify/dist/ReactToastify.css";
 
@@ -41,7 +41,6 @@ const Contact = () => {
   );
   const image1 = getImage(placeholderImage1);
   const image2 = getImage(placeholderImage2);
-  const bgImage1 = convertToBgImage(image1);
 
   const onChange = (key) => (e) => {
     setValues({
@@ -79,11 +78,10 @@ const Contact = () => {
         <div className="container d-flex flex-column">
           <div className="row align-items-center justify-content-between gx-0 min-vh-100">
             <div className="col-12 col-md-5 align-self-stretch">
-              <BackgroundImage
+              <BgImage
+                image={image1}
                 Tag="div"
                 className="d-none d-md-block vw-50 h-100 float-end bg-cover"
-                {...bgImage1}
-                preserveStackingContext
               />
               <GatsbyImage
                 image={image2}
