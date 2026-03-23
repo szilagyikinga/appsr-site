@@ -1,10 +1,10 @@
-import * as React from "react";
 import { graphql } from "gatsby";
+import React from "react";
 
 import Layout from "../components/layout";
+import BlogSection from "../components/pages/home/blog";
 import GuideSection from "../components/pages/home/guide";
 import InformationSection from "../components/pages/home/information";
-import BlogSection from "../components/pages/home/blog";
 
 import LogoAlesio from "../images/logo-AESIO.inline.svg";
 import LogoForever from "../images/logo-FOREVER.inline.svg";
@@ -84,7 +84,7 @@ const IndexPage = ({
 export const query = graphql`
   {
     allContentfulBlog(
-      sort: { fields: title, order: ASC }
+      sort: { title: ASC }
       filter: { featured: { eq: true } }
     ) {
       nodes {

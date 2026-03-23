@@ -1,5 +1,5 @@
-import React from "react";
 import { graphql } from "gatsby";
+import React from "react";
 
 import Layout from "../../components/layout";
 import FactList from "../../components/pages/fact/fact-list";
@@ -11,16 +11,16 @@ const Fact = ({
   },
 }) => {
   const sheets1 = sheets.filter((sheet) =>
-    sheet.content.tags.includes("sheet_1")
+    sheet.content.tags.includes("sheet_1"),
   );
   const sheets2 = sheets.filter((sheet) =>
-    sheet.content.tags.includes("sheet_2")
+    sheet.content.tags.includes("sheet_2"),
   );
   const sheets3 = sheets.filter((sheet) =>
-    sheet.content.tags.includes("sheet_3")
+    sheet.content.tags.includes("sheet_3"),
   );
   const sheets4 = sheets.filter((sheet) =>
-    sheet.content.tags.includes("sheet_4")
+    sheet.content.tags.includes("sheet_4"),
   );
 
   return (
@@ -44,7 +44,7 @@ const Fact = ({
 
 export const query = graphql`
   {
-    allContentfulSheet(sort: { fields: title, order: ASC }) {
+    allContentfulSheet(sort: { title: ASC }) {
       nodes {
         id
         title

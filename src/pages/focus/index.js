@@ -1,10 +1,10 @@
-import React from "react";
 import { Link, graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
+import React from "react";
 
-import slugify from "../../services/slugify";
-import Layout from "../../components/layout";
 import BgImage from "../../components/bg-image";
+import Layout from "../../components/layout";
+import slugify from "../../services/slugify";
 
 const Focus = ({
   data: {
@@ -49,11 +49,7 @@ const Focus = ({
                     className="overlay overlay-black overlay-30 mb-6 card bg-cover shadow-light-lg"
                     style={{ overflow: "hidden" }}
                   >
-                    <BgImage
-                      image={pathToImage}
-                      Tag="div"
-                      className="py-8"
-                    >
+                    <BgImage image={pathToImage} Tag="div" className="py-8">
                       <div
                         className="card-body mt-auto"
                         style={{ textDecoration: "none" }}
@@ -76,7 +72,7 @@ const Focus = ({
 
 export const query = graphql`
   {
-    allContentfulFocus(sort: { fields: title, order: ASC }) {
+    allContentfulFocus(sort: { title: ASC }) {
       nodes {
         id
         title

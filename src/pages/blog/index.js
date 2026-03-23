@@ -1,11 +1,11 @@
-import React from "react";
 import { Link, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from "react";
 
-import slugify from "../../services/slugify";
 import Layout from "../../components/layout";
 import BlogHeroImage from "../../components/pages/blog/blog-hero-image";
 import Curve3 from "../../images/curve-3.inline.svg";
+import slugify from "../../services/slugify";
 
 const Blog = ({
   data: {
@@ -58,7 +58,7 @@ const Blog = ({
 export const query = graphql`
   {
     allContentfulBlog(
-      sort: { fields: title, order: ASC }
+      sort: { title: ASC }
       filter: { featured: { eq: true } }
     ) {
       nodes {

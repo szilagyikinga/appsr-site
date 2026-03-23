@@ -1,5 +1,5 @@
-import React from "react";
 import { graphql } from "gatsby";
+import React from "react";
 
 import GuideList from "../../components/pages/guide/guide-list";
 import guidesList from "../../data/guides";
@@ -13,7 +13,7 @@ const Guide = ({
 export const query = graphql`
   {
     allContentfulGuide(
-      sort: { fields: title, order: ASC }
+      sort: { title: ASC }
       filter: { content: { tags: { eq: "guide_1" } } }
     ) {
       nodes {
