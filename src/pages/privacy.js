@@ -564,9 +564,9 @@ const PrivacyPolicy = () => {
                   <p className="fs-sm mb-5">
                     APPSR
                     <br />
-                    120 avenue du général Leclerc
+                    1-3, rue d'Enghien
                     <br />
-                    75014 Paris
+                    75002 PARIS
                   </p>
 
                   <h6 className="fw-bold text-uppercase text-gray-700 mb-2">
