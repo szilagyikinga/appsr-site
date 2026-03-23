@@ -90,7 +90,7 @@
     right: 0;
     bottom: -$navbar-padding-y;
     left: 0;
-    border-top: $border-width solid fade-out($white, 0.8);
+    border-top: $border-width solid rgba($white, 0.2);
   }
 }
 
@@ -277,7 +277,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: fade-out($primary, 0.2);
+    background-color: rgba($primary, 0.8);
     border-radius: inherit;
   }
 

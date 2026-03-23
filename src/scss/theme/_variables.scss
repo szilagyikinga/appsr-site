@@ -213,20 +213,20 @@ $border-radius-lg: 0.5rem !default;
 $border-radius-xl: 1rem !default; // NEW
 $border-radius-pill: 50rem !default;
 
-$box-shadow: 0 0.5rem 1.5rem fade-out($black, 0.9) !default;
+$box-shadow: 0 0.5rem 1.5rem rgba($black, 0.1) !default;
 $box-shadow-sm: 0 0.125rem 0.25rem rgba($black, 0.075) !default;
-$box-shadow-lg: 0 1.5rem 4rem fade-out($black, 0.9) !default;
+$box-shadow-lg: 0 1.5rem 4rem rgba($black, 0.1) !default;
 
-$box-shadow-light: 0 0.5rem 1.5rem fade-out($black, 0.95) !default;
-$box-shadow-light-lg: 0 1.5rem 4rem fade-out($black, 0.95) !default;
+$box-shadow-light: 0 0.5rem 1.5rem rgba($black, 0.05) !default;
+$box-shadow-light-lg: 0 1.5rem 4rem rgba($black, 0.05) !default;
 
-$box-shadow-dark: 0 0.5rem 1.5rem fade-out($black, 0.85) !default;
-$box-shadow-dark-lg: 0 1.5rem 4rem fade-out($black, 0.85) !default;
+$box-shadow-dark: 0 0.5rem 1.5rem rgba($black, 0.15) !default;
+$box-shadow-dark-lg: 0 1.5rem 4rem rgba($black, 0.15) !default;
 
-$box-shadow-lift: 0 1rem 2.5rem fade-out($black, 0.9),
-  0 0.5rem 1rem -0.75rem fade-out($black, 0.9) !default;
-$box-shadow-lift-lg: 0 2rem 5rem fade-out($black, 0.9),
-  0 0.5rem 1rem -0.75rem fade-out($black, 0.95) !default;
+$box-shadow-lift: 0 1rem 2.5rem rgba($black, 0.1),
+  0 0.5rem 1rem -0.75rem rgba($black, 0.1) !default;
+$box-shadow-lift-lg: 0 2rem 5rem rgba($black, 0.1),
+  0 0.5rem 1rem -0.75rem rgba($black, 0.05) !default;
 
 $component-active-color: $white !default;
 $component-active-bg: $primary !default;
@@ -781,8 +781,8 @@ $list-link-hover-color: $primary !default;
 // Screenshot
 
 $screenshot-border-radius: 0.625rem !default;
-$screenshot-box-shadow: 25px 60px 125px -25px fade-out($gray-700, 0.9),
-  16px 40px 75px -40px fade-out(black, 0.8) !default;
+$screenshot-box-shadow: 25px 60px 125px -25px rgba($gray-700, 0.1),
+  16px 40px 75px -40px rgba(black, 0.2) !default;
 
 //
 // Utilities =====================================

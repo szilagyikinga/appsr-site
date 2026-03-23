@@ -8,7 +8,15 @@ module.exports = {
   },
 
   plugins: [
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          // Bootstrap deprecations - will be fixed in Bootstrap 6
+          silenceDeprecations: ["import", "global-builtin", "color-functions", "if-function"],
+        },
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
