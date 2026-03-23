@@ -1,9 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
-import { convertToBgImage } from "gbimage-bridge";
-import BackgroundImage from "gatsby-background-image";
 
+import BgImage from "../../bg-image";
 import Curve from "../../curve";
 
 const GuideList = ({ title }) => {
@@ -19,18 +18,16 @@ const GuideList = ({ title }) => {
     `
   );
   const image = getImage(placeholderImage);
-  const bgImage = convertToBgImage(image);
   return (
     <>
       <section
         style={{ marginTop: -87 }}
         className="overlay overlay-black overlay-60"
       >
-        <BackgroundImage
+        <BgImage
+          image={image}
           Tag="div"
           className="pt-11 pt-md-14 pb-11 pb-md-14"
-          {...bgImage}
-          preserveStackingContext
         >
           <div className="container">
             <div className="row justify-content-center">
@@ -39,7 +36,7 @@ const GuideList = ({ title }) => {
               </div>
             </div>
           </div>
-        </BackgroundImage>
+        </BgImage>
       </section>
       <Curve className="text-white" />
     </>
