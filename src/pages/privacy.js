@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
               <h1 className="display-4 mb-2">Politique de confidentialité</h1>
 
               <p className="fs-lg text-gray-700 mb-md-0">
-                mise à jour 30/09/2021
+                mise à jour 23/03/2026
               </p>
             </div>
           </div>
@@ -548,7 +548,7 @@ const PrivacyPolicy = () => {
               <p className="text-gray-800">
                 Il est porté à la connaissance de l'utilisateur que la dernière
                 mise à jour de la présente politique de confidentialité est
-                intervenue le&nbsp;: 01/09/2021.
+                intervenue le&nbsp;: 23/03/2026.
               </p>
             </div>
             <div className="col-12 col-md-4">

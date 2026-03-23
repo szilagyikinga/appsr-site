@@ -12,7 +12,7 @@ const TermsOfServices = () => {
               <h1 className="display-4 mb-2">Mentions légales</h1>
 
               <p className="fs-lg text-gray-700 mb-md-0">
-                mise à jour 30/09/2021
+                mise à jour 23/03/2026
               </p>
             </div>
             {/* <div className="col-auto">
