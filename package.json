@@ -35,5 +35,8 @@
     "react-toastify": "^10.0.0",
     "sass": "^1.71.0",
     "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "@netlify/plugin-gatsby": "^3.8.4"
   }
 }
